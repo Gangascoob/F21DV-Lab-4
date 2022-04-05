@@ -1,11 +1,11 @@
 var projection = d3.geoMercator() 
-				   .center([ -50, 65 ]) 
+				   .center([ 0, 0 ]) 
 				   .translate([ 0, 0 ]) 
-				   .scale([350]); 
+				   .scale([150]); 
 
 			//Define path generator
-			var path = d3.geoPath()
-					.projection(projection);
+var path = d3.geoPath()
+		.projection(projection);
 
 
 
