@@ -31,15 +31,13 @@
 }
 
 #bottomhalfcontainer{
-    display: flex;
-	flex-wrap: wrap;
-	align-content: space-evenly;
+    display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 7px;
+	grid-row-gap: 0px;
 	gap: 10px 20px;
 	height: 37.5vh;
-	margin-left: 10px;
-	margin-right: 25px;
-	margin-top: 20px;
-	margin-bottom: 20px;
 	padding: 20px;
 	background-color: white;
 	box-shadow: 1px 1px 1px 2px rgb(217, 217, 217);
