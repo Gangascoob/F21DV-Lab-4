@@ -1,15 +1,15 @@
 #banner {
     text-align:center;
     width:96.5%;
-    height:8vh;
-    background-color:gray;
+    height:6vh;
+    background-color:rgb(228, 220, 220);
     
 
 }
 
 .bannertext{
     color: red;
-    font-size: 5vw;
+    font-size: 5vh;
     font-family: sans-serif;
     font-weight: bold;
     padding-top: 10px;
