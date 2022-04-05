@@ -15,18 +15,21 @@
 }
 
 #tophalfcontainer{
-    display: flex;
-	flex-wrap: wrap;
-	align-content: space-evenly;
+    display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
 	gap: 10px 20px;
 	height: 37.5vh;
 	margin-left: 10px;
-	margin-right: 25px;
+	margin-right: 20px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	padding: 20px;
 	background-color: white;
 	box-shadow: 1px 1px 1px 2px rgb(217, 217, 217);
+	grid-template-areas: "infobox driverpos wdcwcc";
 
 }
 
@@ -38,13 +41,18 @@
 	grid-row-gap: 0px;
 	gap: 10px 20px;
 	height: 37.5vh;
+	margin-left: 10px;
+	margin-right: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	padding: 20px;
 	background-color: white;
 	box-shadow: 1px 1px 1px 2px rgb(217, 217, 217);
-	grid-template-areas: ". map map map ."
+	grid-template-areas: "prevbut map map map nextbut";
 
 }
 
 #mapcontainer{
 	grid-area: map;
 }
+
