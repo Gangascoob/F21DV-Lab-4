@@ -1,6 +1,6 @@
 var projection = d3.geoMercator() 
 				   .center([ 0, 0 ]) 
-				   .translate([ 0, 0 ]) 
+				   .translate([ 50, 50 ]) 
 				   .scale([150]); 
 
 			//Define path generator
