@@ -1,0 +1,15 @@
+#banner {
+    text-align:center;
+    width:96.5%;
+    height:10vh;
+    background-color:gray;
+    
+
+}
+
+.bannertext{
+    color: red;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
