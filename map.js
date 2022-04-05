@@ -1,4 +1,4 @@
-var projection = d3.geoMercator() 
+var projection = d3.geoEquirectangular() 
 				   .center([ 0, 0 ]) 
 				   .translate([ 150, 150 ]) 
 				   .scale([150]); 
