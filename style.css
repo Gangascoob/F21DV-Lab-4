@@ -1,8 +1,6 @@
 #banner {
     text-align:center;
-    width:96.5%;
-    height:6vh;
-    background-color:rgb(228, 220, 220);
+    background-color:rgb(219, 219, 219);
     
 
 }
@@ -12,5 +10,5 @@
     font-size: 5vw;
     font-family: sans-serif;
     font-weight: bold;
-    padding-top: 10px;
+    padding-top: 0.5vh;
 }
