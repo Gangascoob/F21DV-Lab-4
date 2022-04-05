@@ -1,6 +1,6 @@
 var projection = d3.geoEquirectangular() 
 				   .center([ 0, 0 ]) 
-				   .translate([ 350, 250 ]) 
+				   .translate([ 350, 220 ]) 
 				   .scale([130]); 
 
 			//Define path generator
