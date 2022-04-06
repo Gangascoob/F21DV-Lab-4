@@ -51,8 +51,8 @@ d3.csv("data/circuits2021.csv", (data)=>{
 		.data(data)
 		.enter()
 		.append("circle")
-		.attr("cx", function (d) { return projection([+d.lng, +d.lat]);})
-		.attr("cy", function (d) {return projection([+d.lng, +d.lat]);})
+		.attr("cx", function (d) { return projection([+d.lng, +d.lat])[0];})
+		.attr("cy", function (d) {return projection([+d.lng, +d.lat])[1];})
 		.attr("r", "8px")
 		.attr("fill", "red")
 
