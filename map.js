@@ -62,7 +62,11 @@ function nextcircuit(){
 circuitposition++;
 if(circuitposition>(circuitidorder.length-1)){
 	circuitposition = circuitidorder.length - 1;
+	d3.select("#nextbut")
+		.text("");
 }
+else d3.select("#nextbut")
+		.text("Next Round");
 d3.selectAll("#marker" + circuitidorder[circuitposition])
 	.transition()
 	.attr("r", 10)
