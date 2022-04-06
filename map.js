@@ -60,6 +60,7 @@ d3.json("worldmap.json").then(function(json){
 
 function nextcircuit(){
 circuitposition++;
+
 if(circuitposition>(circuitidorder.length-1)){
 	circuitposition = circuitidorder.length - 1;
 	d3.select("#nextbut")
@@ -67,10 +68,15 @@ if(circuitposition>(circuitidorder.length-1)){
 }
 else d3.select("#nextbut")
 		.text("Next Round");
+
+d3.select("#prevbut")
+	.text("Previous Round");
+
 d3.selectAll("#marker" + circuitidorder[circuitposition])
 	.transition()
 	.attr("r", 10)
 	.attr("fill", "green");
+
 d3.selectAll("#marker" + circuitidorder[circuitposition - 1])
 	.transition()
 	.attr("r", 3)
@@ -79,9 +85,18 @@ d3.selectAll("#marker" + circuitidorder[circuitposition - 1])
 
 function prevcircuit(){
 	circuitposition--;
+
 	if(circuitposition < 0){
+		d3.select("#prevbut")
+		.text("");
 		circuitposition = 0;
 	}
+	else d3.select("#prevbut")
+			.text("Previous Round");
+
+	d3.select("#nextbut")
+		.text("Next Round");
+
 	d3.selectAll("#marker" + circuitidorder[circuitposition])
 		.transition()
 		.attr("r", 10)
