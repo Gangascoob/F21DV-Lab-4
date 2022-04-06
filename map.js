@@ -47,12 +47,14 @@ d3.csv("data/circuits2021.csv").then(function(csv){
 
 d3.csv("data/circuits2021.csv", function(data){
 
+	console.log("test");
 	svg.selectAll("circle")
+
 		.data(data)
 		.enter()
 		.append("circle")
-		.attr("cx", function (d) { console.log(+d.lng);return projection([+d.lng, +d.lat])[0];})
-		.attr("cy", function (d) {return projection([+d.lng, +d.lat])[1];})
+		.attr("cx", function (d) { console.log(+d.lng);return projection([+d.lng, +d.lat]);})
+		.attr("cy", function (d) {return projection([+d.lng, +d.lat]);})
 		.attr("r", "8px")
 		.attr("fill", "red")
 
