@@ -52,13 +52,14 @@ d3.csv("data/circuits2021.csv", function(data){
 
 	console.log("test");
 
-	lonlatPoint = [data.lat, data.lng];
+	lonlatPoint = [data.lng, data.lat];
 	projectedPoint = projection(lonlatPoint);
 	console.log(projectedPoint);
 
 	var circle = d3.geoCircle()
 					.center(projectedPoint)
-					.radius(5);
+					.radius(0.5)
+					.attr("fill", "red");
 
 	svg.append('path')
 		.attr('d', path(circle()));
