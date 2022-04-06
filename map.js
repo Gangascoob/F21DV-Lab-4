@@ -71,7 +71,7 @@ d3.csv("data/circuits2021.csv").then(function(csv){
 */
 
 
-function changesilverstone(){
+function nextcircuit(){
 circuitposition++;
 d3.selectAll("#marker" + circuitidorder[circuitposition])
 	.transition()
@@ -82,6 +82,18 @@ d3.selectAll("#marker" + circuitidorder[circuitposition - 1])
 	.attr("radius", 3)
 	.attr("fill", "red");
 };
+
+function prevcircuit(){
+	circuitposition--;
+	d3.selectAll("#marker" + circuitidorder[circuitposition])
+		.transition()
+		.attr("radius", 10)
+		.attr("fill", "green");
+	d3.selectAll("#marker" + circuitidorder[circuitposition + 1])
+		.transition()
+		.attr("radius", 3)
+		.attr("fill", "red");
+	};
 
 /*
 d3.csv("data/circuits2021.csv", function(data){
