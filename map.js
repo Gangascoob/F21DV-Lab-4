@@ -17,7 +17,7 @@ var path = d3.geoPath()
 d3.csv("data/circuits2021.csv", function(data){
 
 	circuitmarks.push({lng: data.lng, lat: data.lat, circuitid: data.circuitId});
-	console.log(circuitmarks);
+	
 })
 
 
