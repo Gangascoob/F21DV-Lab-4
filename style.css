@@ -63,3 +63,18 @@
 #nextbut{
 	grid-area: nextbut;
 }
+
+#infobox{
+	grid-area: infobox;
+	box-shadow: 1px 1px 1px 1px rgb(217, 217, 217);
+}
+
+#driverpos{
+	grid-area: driverpos;
+	box-shadow: 1px 1px 1px 1px rgb(217, 217, 217);
+}
+
+#wdcwcc{
+	grid-area: wdcwcc;
+	box-shadow: 1px 1px 1px 1px rgb(217, 217, 217);
+}
