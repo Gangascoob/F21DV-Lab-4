@@ -58,9 +58,12 @@ d3.csv("data/circuits2021.csv", function(data){
 
 	svg.append("g")
 		.selectAll("g")
+		.data(data)
 		.enter()
 		.append("g")
-		.attr("transform", projectedPoint)
+		.attr("transform", function(d){
+			return "translate(" + projectedPoint + ")";
+		})
 		.append("circle")
 		.attr("r", 5)
 		.attr("fill", "red");
