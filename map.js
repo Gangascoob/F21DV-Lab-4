@@ -52,7 +52,7 @@ d3.csv("data/circuits2021.csv", function(data){
 
 	console.log("test");
 
-	lonlatPoint = [data.lng, data.lat];
+	lonlatPoint = [data.lat, data.lng];
 	projectedPoint = projection(lonlatPoint);
 	console.log(projectedPoint);
 
