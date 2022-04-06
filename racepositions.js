@@ -9,7 +9,7 @@ d3.csv("data/laptimes2021.csv", function(data){
 sampledata.push({id: data.raceId, driver: data.driverId, lap: data.lap, position: data.position});
 
 }).then(function filter(){
-filteredracedata = sampledata.filter(function(d){return d.raceId == raceidselect});
+filteredracedata = sampledata.filter(function(d){return id == raceidselect});
 
 console.log(filteredracedata[1]);
 
