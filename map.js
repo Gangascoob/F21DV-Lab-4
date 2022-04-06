@@ -1,7 +1,7 @@
 
 var circuitmarks = []
-
-
+var circuitidorder = [3, 21, 75, 4, 6, 73, 34, 70, 70, 9, 11, 13, 39, 14, 71, 5, 69, 32, 18, 78, 77, 24]
+var circuitposition = -1;
 
 var projection = d3.geoEquirectangular() 
 				   .center([ -30, 0 ]) 
@@ -72,10 +72,15 @@ d3.csv("data/circuits2021.csv").then(function(csv){
 
 
 function changesilverstone(){
-d3.selectAll("#marker9")
+circuitposition++;
+d3.selectAll("#marker" + circuitidorder[circuitposition])
 	.transition()
 	.attr("radius", 10)
 	.attr("fill", "green");
+d3.selectAll("#marker" + circuitidorder[circuitposition - 1])
+	.transition()
+	.attr("radius", 3)
+	.attr("fill", "red");
 };
 
 /*
