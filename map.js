@@ -74,7 +74,8 @@ d3.csv("data/circuits2021.csv").then(function(csv){
 function changesilverstone(){
 d3.selectAll("#marker9")
 	.transition()
-	.attr("fill", "blue");
+	.attr("radius", 10)
+	.attr("fill", "green");
 };
 
 /*
