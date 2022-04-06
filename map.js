@@ -1,3 +1,8 @@
+
+var lonlatPoint = [];
+
+
+
 var projection = d3.geoEquirectangular() 
 				   .center([ 0, 0 ]) 
 				   .translate([ 350, 220 ]) 
@@ -6,10 +11,6 @@ var projection = d3.geoEquirectangular()
 			//Define path generator
 var path = d3.geoPath()
 		.projection(projection);
-
-
-
-
 
 
 
@@ -56,12 +57,11 @@ d3.csv("data/circuits2021.csv", function(data){
 	projectedPoint = projection(lonlatPoint);
 	console.log(projectedPoint);
 
-	var circle = d3.geoCircle()
-					.center(projectedPoint)
-					.radius(0.5)
-					
-
-	svg.append('path')
-		.attr('d', path(circle()));
+	svg.selectAll("circle")
+		.join("circle")
+		.attr("cx", projectedPoint[0])
+		.attr("cy", projectedPoint[1])
+		.attr("r", 4)
+		.attr("fill", "red");
 
 });
