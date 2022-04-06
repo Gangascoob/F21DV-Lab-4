@@ -16,7 +16,7 @@ var path = d3.geoPath()
 
 d3.csv("data/circuits2021.csv", function(data){
 
-	circuitmarks.push({lng: data.lng, lat: data.lat});
+	circuitmarks.push({lng: data.lng, lat: data.lat, circuitid: data.circuitId});
 	console.log(circuitmarks);
 })
 
@@ -45,7 +45,11 @@ d3.json("worldmap.json").then(function(json){
 		.attr("cx", function(d){return projection([d.lng, d.lat])[0]})
 		.attr("cy", function(d){return projection([d.lng, d.lat])[1]})
 		.attr("r", 3)
-		.attr("fill", "red");
+		.attr("fill", "red")
+		.attr("class", "marker")
+		.attr("id", function(d, i){
+			return "marker" + d.circuitId;
+		});
            
 });	   
 
@@ -64,7 +68,8 @@ d3.csv("data/circuits2021.csv").then(function(csv){
 });
 */
 
-
+d3.select("#marker9")
+	.attr("fill", "blue");
 
 
 /*
