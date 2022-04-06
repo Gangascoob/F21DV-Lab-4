@@ -29,7 +29,7 @@ d3.json("worldmap.json").then(function(json){
            .attr("fill", "rgba(8, 81, 156, 0.6)");
            
 	   
-})
+
 /*
 d3.csv("data/circuits2021.csv").then(function(csv){
 
@@ -45,7 +45,7 @@ d3.csv("data/circuits2021.csv").then(function(csv){
 });
 */
 
-d3.csv("data/circuits2021.csv", (data)=>{
+d3.csv("data/circuits2021.csv", function(data){
 
 	svg.selectAll("circle")
 		.data(data)
@@ -56,4 +56,5 @@ d3.csv("data/circuits2021.csv", (data)=>{
 		.attr("r", "8px")
 		.attr("fill", "red")
 
+});
 });
