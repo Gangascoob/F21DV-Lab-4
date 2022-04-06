@@ -4,9 +4,9 @@ var circuitmarks = []
 
 
 var projection = d3.geoEquirectangular() 
-				   .center([ 0, 0 ]) 
+				   .center([ -30, 0 ]) 
 				   .translate([ 350, 220 ]) 
-				   .scale([130]); 
+				   .scale([150]); 
 
 			
 var path = d3.geoPath()
