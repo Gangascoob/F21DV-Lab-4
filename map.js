@@ -75,11 +75,11 @@ function nextcircuit(){
 circuitposition++;
 d3.selectAll("#marker" + circuitidorder[circuitposition])
 	.transition()
-	.attr("radius", 10)
+	.attr("r", 10)
 	.attr("fill", "green");
 d3.selectAll("#marker" + circuitidorder[circuitposition - 1])
 	.transition()
-	.attr("radius", 3)
+	.attr("r", 3)
 	.attr("fill", "red");
 };
 
@@ -87,11 +87,11 @@ function prevcircuit(){
 	circuitposition--;
 	d3.selectAll("#marker" + circuitidorder[circuitposition])
 		.transition()
-		.attr("radius", 10)
+		.attr("r", 10)
 		.attr("fill", "green");
 	d3.selectAll("#marker" + circuitidorder[circuitposition + 1])
 		.transition()
-		.attr("radius", 3)
+		.attr("r", 3)
 		.attr("fill", "red");
 	};
 
