@@ -11,7 +11,7 @@ sampledata.push({id: csv.raceId, driver: csv.driverId, lap: csv.lap, position: c
 filteredracedata = sampledata.filter(function(d){return d.raceId == raceidselect});
 
 racedata = [{id: filteredracedata.raceId, driver: filteredracedata.driverId, lap: filteredracedata.lap, position: filteredracedata.position}];
-
+console.log(racedata[5]);
 });
 
 console.log(racedata[5]);
