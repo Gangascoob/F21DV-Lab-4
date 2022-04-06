@@ -59,7 +59,7 @@ d3.csv("data/circuits2021.csv", function(data){
 	var circle = d3.geoCircle()
 					.center(projectedPoint)
 					.radius(0.5)
-					.attr("fill", "red");
+					
 
 	svg.append('path')
 		.attr('d', path(circle()));
