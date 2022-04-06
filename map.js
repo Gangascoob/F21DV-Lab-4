@@ -48,7 +48,9 @@ d3.json("worldmap.json").then(function(json){
 		.attr("fill", "red")
 		.attr("class", "marker")
 		.attr("id", function(d){
+			console.log("marker" + d.circuitid);
 			return "marker" + d.circuitid;
+			
 		});
            
 });	   
