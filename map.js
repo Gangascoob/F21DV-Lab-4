@@ -73,8 +73,8 @@ d3.csv("data/circuits2021.csv").then(function(csv){
 
 function nextcircuit(){
 circuitposition++;
-if(circuitposition>(circuitidorder.size-1)){
-	circuitposition = circuitidorder.size - 1;
+if(circuitposition>(circuitidorder.length-1)){
+	circuitposition = circuitidorder.length - 1;
 }
 d3.selectAll("#marker" + circuitidorder[circuitposition])
 	.transition()
