@@ -58,7 +58,7 @@ d3.csv("data/circuits2021.csv", function(data){
 	console.log(projectedPoint);
 
 	svg.selectAll("circle")
-		.join("circle")
+		.append("circle")
 		.attr("cx", projectedPoint[0])
 		.attr("cy", projectedPoint[1])
 		.attr("r", 4)
