@@ -45,6 +45,9 @@ d3.csv("data/circuits2021.csv").then(function(csv){
 });
 */
 
+
+});
+
 d3.csv("data/circuits2021.csv", function(data){
 
 	console.log("test");
@@ -61,5 +64,4 @@ d3.csv("data/circuits2021.csv", function(data){
 		.attr("r", "8px")
 		.attr("fill", "red")
 
-});
 });
