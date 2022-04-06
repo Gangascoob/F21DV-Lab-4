@@ -48,7 +48,7 @@ d3.json("worldmap.json").then(function(json){
 		.attr("fill", "red")
 		.attr("class", "marker")
 		.attr("id", function(d){
-			console.log("marker" + d.circuitid);
+			
 			return "marker" + d.circuitid;
 			
 		});
@@ -70,9 +70,12 @@ d3.csv("data/circuits2021.csv").then(function(csv){
 });
 */
 
-d3.select("#marker9")
-	.attr("fill", "blue");
 
+function changesilverstone(){
+d3.selectAll("#marker9")
+	.transition()
+	.attr("fill", "blue");
+};
 
 /*
 d3.csv("data/circuits2021.csv", function(data){
