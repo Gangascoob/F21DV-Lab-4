@@ -53,7 +53,7 @@ d3.csv("data/circuits2021.csv", function(data){
 	projectedPoint = projection(lonlatPoint);
 	console.log(projectedPoint);
 
-	svg.selectAll("path")
+	svg.selectAll("circle")
 		.enter()
 		.append("circle")
 		.attr("cx", projectedPoint[0])
