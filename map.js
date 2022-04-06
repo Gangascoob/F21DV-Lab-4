@@ -30,3 +30,16 @@ d3.json("worldmap.json").then(function(json){
            
 	   
 })
+
+d3.csv("data/circuits2021.csv").then(function(csv){
+
+	svg.selectAll("circle")
+		.data(csv)
+		.enter()
+		.append("circle")
+		.attr("cx", function (d) { return projection(d.lat);})
+		.attr("cy", function (d) {return projection(d.lng);})
+		.attr("r", "8px")
+		.attr("fill", "red")
+
+});
