@@ -4,7 +4,7 @@ let racedata = [];
 
 var raceidselect;
 
-raceidselect = 1061;
+raceidselect = 1052;
 
 
 function racefilter(){
@@ -34,4 +34,10 @@ function loadnext(){
         racegraph(racedata);
     }, 1500);
 
-}
+};
+
+
+racefilter();
+setTimeout(function(){
+    racegraph(racedata);
+}, 1000);
