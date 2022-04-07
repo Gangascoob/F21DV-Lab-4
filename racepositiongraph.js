@@ -95,7 +95,7 @@ dataNest.forEach(function(d,i){
                 }
                 if(d.key == "4" || d.key =="839"){
                     //ALPINE
-                    return "#0090FF";
+                    return "#0044ff";
                 }
                 if(d.key == "842" || d.key == "852"){
                     //ALPHATAURI
@@ -103,11 +103,11 @@ dataNest.forEach(function(d,i){
                 }
                 if(d.key == "8" || d.key == "841" || d.key == "9"){
                     //ALFAROMEO
-                    return "#900000";
+                    return "#490303";
                 }
                 if(d.key == "849" || d.key == "847"){
                     //WILLIAMS
-                    return "#005AFF";
+                    return "#588ef1";
                 }
                 if(d.key == "854" || d.key == "853"){
                     //HAAS
