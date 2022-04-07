@@ -46,7 +46,7 @@ console.log(yExtent);
 
 const x = d3.scaleLinear()
             .domain([ xExtent[0], xExtent[1]])
-            .range([0,500]);
+            .range([0,700]);
 
 const y = d3.scaleLinear()
             .domain([ yExtent[1], yExtent[0]])

@@ -78,6 +78,7 @@
 #driverpos{
 	grid-area: driverpos;
 	box-shadow: 1px 1px 1px 1px rgb(217, 217, 217);
+	overflow: auto;
 }
 
 #wdcwcc{
