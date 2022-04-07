@@ -119,14 +119,22 @@ dataNest.forEach(function(d,i){
                 }
 
                 else return "black";
-            }).attr("transform", "translate(20, 30)")
+            })
+            .attr("transform", "translate(20, 30)");
+
+    svgrace.selectAll("dot")
+            .enter()
+            .append("circle")
+            .attr("r", 2)
+            .attr("cx", function(d){return x(+d.lap);})
+            .attr("cy", function(d){return y(+d.position);})
             .on("mouseover", mouseoverline(d.key))
             .on("mouseout", function(){
                 div.transition()
                 .duration(500)
                 .style("opacity", 0);
                 console.log("test2");
-            })
+            });
 })
 
 function mouseoverline(e, data){
