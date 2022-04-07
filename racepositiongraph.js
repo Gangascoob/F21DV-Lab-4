@@ -51,19 +51,19 @@ console.log(yExtent);
 
 const x = d3.scaleLinear()
             .domain([ minlaps, maxlaps])
-            .range([0,420]);
+            .range([0,500]);
 
 const y = d3.scaleLinear()
             .domain([ yExtent[1], yExtent[0]])
             .range([280,0]);
 
 svgrace.append("g")
-        .attr("transform", "translate(20," + 300 +")")
+        .attr("transform", "translate(20," + 280 +")")
         .call(d3.axisBottom(x).ticks(maxlaps));
 
 svgrace.append("g")
     .call(d3.axisLeft(y))
-    .attr("transform", "translate(20, 0)");
+    .attr("transform", "translate(20, 20)");
     //.attr("transform", "translate(20, 0)");
 
 
