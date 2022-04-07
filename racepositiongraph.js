@@ -75,6 +75,8 @@ var linefunction = d3.line()
 dataNest.forEach(function(d,i){
     svgrace.append("path")
             .attr("class", "line")
+            .attr("fill", "none")
+            .attr("stroke-width", 1.5)
             .attr("d", linefunction(d.value));
 })
 
