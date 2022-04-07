@@ -71,7 +71,7 @@ var linefunction = d3.line()
 
 dataNest.forEach(function(d,i){
     svgrace.append("path")
-            .attr("class", "line team")
+            .attr("class", "line")
             .attr("fill", "none")
             
             .attr("stroke-width", 1.5)
@@ -123,7 +123,7 @@ dataNest.forEach(function(d,i){
             .attr("id", function(){
                 return idselector(d);
             })
-            
+            .attr("opacity", 0)
             .attr("transform", "translate(20, 30)");
 
     
