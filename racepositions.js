@@ -1,7 +1,7 @@
 let sampledata = [];
 let filteredracedata = [];
 let racedata = [];
-var groupedracedata = [];
+let groupedracedata = [];
 var raceidselect;
 
 raceidselect = 1061;
@@ -17,8 +17,8 @@ for(i=0; i<filteredracedata.length; i++){
 racedata.push({id: filteredracedata[i].id, driver: filteredracedata[i].driver, lap: filteredracedata[i].lap, position: filteredracedata[i].position});
 }
 
-groupedracedata = d3.group(racedata, d=>d.driver);
-console.log(groupedracedata);
+groupedracedata = d3.groups(racedata, d=>d.driver);
+
 
 
 //console.log(groupedracedata.get("1"));
@@ -26,6 +26,7 @@ console.log(groupedracedata);
 });
 
 
+setTimeout(function(){
+    console.log(groupedracedata);
+}, 500);
 
-
-console.log(groupedracedata);
