@@ -19,20 +19,26 @@ var svgrace = d3.select("#driverpos")
                 .attr("id", "linesvg")
                 .append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
-
+let laps = [];
 
 /*
 var xExtent = [d3.min(data.lap), d3.max(data.lap)];
 console.log(xExtent);
 */
-console.log(data);
-console.log(data[1].lap);
 
+
+for(i=0; i<data.length; i++){
+    laps.push([data[i].lap])
+}
+console.log(laps);
+
+var minlaps = d3.min(laps);
+var maxlaps = d3.max(laps);
 
 var yExtent = d3.extent(data, d => d.position);
 console.log(yExtent);
 const x = d3.scaleLinear()
-            .domain([ xExtent[0], xExtent[1]])
+            .domain([ minlaps, maxlaps])
             .range([0,300]);
 
 const y = d3.scaleLinear()
