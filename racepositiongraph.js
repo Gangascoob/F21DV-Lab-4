@@ -37,7 +37,8 @@ svgrace.append("g")
         .call(d3.axisBottom(x));
 
 svg.append("g")
-    .call(d3.axisLeft(y));
+    .call(d3.axisLeft(y))
+    .attr("transform", "translate(20, 0)");
 
 
 
