@@ -1,7 +1,7 @@
 
 var circuitmarks = []
 var circuitidorder = [3, 21, 75, 4, 6, 73, 34, 70, 70, 9, 11, 13, 39, 14, 71, 5, 69, 32, 18, 78, 77, 24]
-var circuitposition = -1;
+var circuitposition = 0;
 
 var projection = d3.geoEquirectangular() 
 				   .center([ -30, 0 ]) 
