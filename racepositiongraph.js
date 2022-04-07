@@ -36,9 +36,9 @@ svgrace.append("g")
         .attr("transform", "translate(0," + 250 +")")
         .call(d3.axisBottom(x));
 
-svg.append("g")
-    .call(d3.axisLeft(y))
-    .attr("transform", "translate(20, 0)");
+svgrace.append("g")
+    .call(d3.axisLeft(y));
+    //.attr("transform", "translate(20, 0)");
 
 
 
