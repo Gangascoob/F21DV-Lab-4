@@ -50,6 +50,10 @@ yAxis = d3.axisLeft()
     .scale(yScale)
     .ticks(10)
 
+yAxis = svgrace.append("g")
+                .call(d3.axisLeft(yScale));
+                
+
 svgrace.append("g")
     .attr("class", "axis")
     .attr("transform", `translate(${margin.left},20)`) //use variable in translate
