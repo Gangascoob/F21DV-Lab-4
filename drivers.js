@@ -23,9 +23,9 @@ function drivertooltip(data){
 function AllTeamsCheck(){
 var checkbox = document.getElementsByName("allteams");
 if (checkbox[0].checked){
-    d3.selectAll(".team").transition().duration(500).attr("opacity", 1);
+    d3.selectAll(".line").transition().duration(500).attr("opacity", 1);
 }
-else d3.selectAll(".team").transition().duration(500).attr("opacity", 0);
+else d3.selectAll(".line").transition().duration(500).attr("opacity", 0);
 
 
 }

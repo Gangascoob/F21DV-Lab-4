@@ -50,12 +50,12 @@ const y = d3.scaleLinear()
             .range([280,0]);
 
 svgrace.append("g")
-        .attr("transform", "translate(20," + 310 +")")
+        .attr("transform", "translate(50," + 310 +")")
         .call(d3.axisBottom(x).ticks(xExtent[1]).tickSize(2));
 
 svgrace.append("g")
     .call(d3.axisLeft(y).ticks(yExtent[1]))
-    .attr("transform", "translate(20, 30)");
+    .attr("transform", "translate(50, 30)");
     //.attr("transform", "translate(20, 0)");
 
 var groupedracedata = d3.group(racedata, d=>d.driver);
@@ -124,7 +124,7 @@ dataNest.forEach(function(d,i){
                 return idselector(d);
             })
             .attr("opacity", 0)
-            .attr("transform", "translate(20, 30)");
+            .attr("transform", "translate(50, 30)");
 
     
 })
