@@ -65,7 +65,7 @@ var groupedracedata = d3.groups(racedata, d=>d.driver);
 
 console.log(groupedracedata);
 
-var res = groupedracedata.map(function(d){return d.key});
+var res = groupedracedata.map(function(d){return d.driver});
 console.log(res);
 
 svgrace.selectAll(".line")
