@@ -120,53 +120,62 @@ dataNest.forEach(function(d,i){
 
                 else return "black";
             })
+            .attr("id", function(){
+                idselector(d.key);
+            })
             .attr("transform", "translate(20, 30)");
 
-    svgrace.selectAll("dot")
-            .append("circle")
-            .attr("r", 2)
-            .attr("cx", function(d){return x(+d.lap);})
-            .attr("cy", function(d){return y(+d.position);})
-            .on("click", mouseoverline);
+    
 })
 
-function mouseoverline(e, d){
-    
-    console.log(d.key);
-    div.transition()
-        .duration(100)
-        .style("opacity", .9);
-    div.html(function(){
-        drivertooltip(d.key);
-        });
-    console.log("test");
-        
+function idselector(d){
+    if(d.key == "846" || d.key == "817"){
+        //MCLAREN
+        return "mclaren";
+    }
+    if(d.key == "1" || d.key == "822"){
+        //MERCEDES
+        return "mercedes";
+    }
+    if(d.key == "830" || d.key == "815"){
+        //REDBULL
+        return "redbull";
+    }
+    if(d.key == "832" || d.key == "844"){
+        //FERRARI
+        return "ferrari";
+    }
+    if(d.key == "4" || d.key =="839"){
+        //ALPINE
+        return "alpine";
+    }
+    if(d.key == "842" || d.key == "852"){
+        //ALPHATAURI
+        return "alphatauri";
+    }
+    if(d.key == "8" || d.key == "841" || d.key == "9"){
+        //ALFAROMEO
+        return "alfaromeo";
+    }
+    if(d.key == "849" || d.key == "847"){
+        //WILLIAMS
+        return "williams";
+    }
+    if(d.key == "854" || d.key == "853"){
+        //HAAS
+        return "haas";
+    }
+    if(d.key == "20" || d.key == "840"){
+        //ASTONMARTIN
+        return "astonmartin";
+    }
+}
+
+d3.select("#ferrari").attr("stroke", "white");
 
 }
 
 
-
-}
-
-
-
-
-/*
-svgrace.selectAll(".line")
-        .append("g")
-        .attr("class", "line")
-        .data(groupedracedata)
-        .enter()
-        .append("path")
-        .attr("d", function(d){
-            return d3.line().x(d=>x(+d.lap))
-                            .y(d=>y(+d.position))
-        })
-        .attr("fill", "none")
-        .attr("stroke", "black")
-        .attr("stroke-width", 2);
-
-*/
 
 
 
