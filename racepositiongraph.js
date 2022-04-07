@@ -76,7 +76,12 @@ dataNest.forEach(function(d,i){
     svgrace.append("path")
             .attr("class", "line")
             .attr("fill", "none")
-            .attr("stroke", "steelblue")
+            .attr("stroke", function(d,i){
+                if(d.key == "846" || d.key == "817"){
+                    return "#FF9E1B";
+                }
+                else return "steelblue";
+            })
             .attr("stroke-width", 1.5)
             .attr("d", linefunction(d.value))
             .attr("transform", "translate(20, 30)");
