@@ -13,7 +13,15 @@ filteredracedata = sampledata.filter(function(d){return d.id == raceidselect});
 
 console.log(filteredracedata);
 
-racedata.push({id: filteredracedata.id, driver: filteredracedata.driver, lap: filteredracedata.lap, position: filteredracedata.position});
+
+for(i=0; i<filteredracedata.length; i++){
+racedata[i] = [{id: filteredracedata[i].id, driver: filteredracedata[i].driver, lap: filteredracedata[i].lap, position: filteredracedata[i].position}]
+
+}
+
+
+
+//racedata.push({id: filteredracedata.id, driver: filteredracedata.driver, lap: filteredracedata.lap, position: filteredracedata.position});
 console.log(racedata);
 });
 
