@@ -14,7 +14,7 @@ function racegraph(data){
 
 var svgrace = d3.select("#driverpos")
                 .append("svg")
-                .attr("width", "90%")
+                .attr("width", "150%")
                 .attr("height", "100%")
                 .attr("id", "linesvg")
                 .append("g").attr("transform", `translate(${margin.left},${margin.top})`);
@@ -42,7 +42,7 @@ var lapnumbers = laps.map(s => +s);
 var yExtent = d3.extent(positionnumbers);
 var xExtent = d3.extent(lapnumbers);
 
-console.log(yExtent);
+
 
 const x = d3.scaleLinear()
             .domain([ xExtent[0], xExtent[1]])
@@ -63,7 +63,7 @@ svgrace.append("g")
 
 var groupedracedata = d3.groups(racedata, d=>d.driver);
 
-
+console.log(groupedracedata);
 
 svgrace.selectAll(".line")
         .append("g")
