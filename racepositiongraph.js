@@ -36,8 +36,8 @@ console.log(laps);
 
 
 setTimeout(function(){
-    var minlaps = d3.min(laps);
-var maxlaps = d3.max(laps);
+var minlaps = d3.min(laps, s=>+s);
+var maxlaps = d3.max(laps, s=>+s);
 
 console.log(minlaps + " " + maxlaps);
 }, 1500);
