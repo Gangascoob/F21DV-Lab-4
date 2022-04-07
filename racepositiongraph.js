@@ -131,11 +131,12 @@ dataNest.forEach(function(d,i){
 function mouseoverline(event, data){
     
     div.transition()
-        .duration(200)
+        .duration(100)
         .style("opacity", .9);
     div.html(function(){
         drivertooltip(data);
         });
+    console.log("test");
         
 
 }
