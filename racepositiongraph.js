@@ -1,4 +1,4 @@
-const margin = { top: 40, bottom: 10, left: 40, right: 20 };
+const margin = { top: 10, bottom: 10, left: 10, right: 20 };
 
 
 
@@ -32,11 +32,11 @@ yScale = d3.scaleLinear().domain([0, yMax]).range([400, 0]);
 
 //draw xAxis and xAxis label
 xAxis = svgrace.append("g")
-                .call(d3.axisBottom(x));
+                .call(d3.axisBottom(x))
+                .attr("transform", "translate(0, 400)");
     
 
-d3.select("#linesvg")
-    .append("g")
+svgrace.append("g")
     .attr("class", "axis")
     .attr("transform", "translate(0,420)")
     .call(x)
@@ -50,8 +50,7 @@ yAxis = d3.axisLeft()
     .scale(yScale)
     .ticks(10)
 
-d3.select('#linesvg')
-    .append("g")
+svgrace.append("g")
     .attr("class", "axis")
     .attr("transform", `translate(${margin.left},20)`) //use variable in translate
     .call(yAxis)
