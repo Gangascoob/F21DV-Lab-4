@@ -128,7 +128,7 @@ dataNest.forEach(function(d,i){
             .attr("r", 2)
             .attr("cx", function(d){return x(+d.lap);})
             .attr("cy", function(d){return y(+d.position);})
-            .on("mouseover", mouseoverline);
+            .on("click", mouseoverline);
 })
 
 function mouseoverline(e, d){
