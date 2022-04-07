@@ -65,6 +65,9 @@ var groupedracedata = d3.groups(racedata, d=>d.driver);
 
 console.log(groupedracedata);
 
+var res = groupedracedata.map(function(d){return d.key});
+console.log(res);
+
 svgrace.selectAll(".line")
         .append("g")
         .attr("class", "line")
@@ -72,8 +75,8 @@ svgrace.selectAll(".line")
         .enter()
         .append("path")
         .attr("d", function(d){
-            return d3.line().x(d=>x(d.lap))
-                            .y(d=>y(d.position))
+            return d3.line().x(d=>x(+d.lap))
+                            .y(d=>y(+d.position))
         })
         .attr("fill", "none")
         .attr("stroke", "black")
