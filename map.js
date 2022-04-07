@@ -86,7 +86,7 @@ d3.selectAll("#marker" + circuitidorder[circuitposition - 1])
 function prevcircuit(){
 	circuitposition--;
 
-	if(circuitposition = 0){
+	if(circuitposition <= 0){
 		d3.select("#prevbut")
 		.text("");
 		circuitposition = 0;
