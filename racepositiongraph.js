@@ -81,9 +81,47 @@ dataNest.forEach(function(d,i){
             .attr("d", linefunction(d.value))
             .attr("stroke", function(){
                 if(d.key == "846" || d.key == "817"){
-                    return "#FF9E1B";
+                    //MCLAREN
+                    return "#FF8700";
                 }
-                else return "steelblue";
+                if(d.key == "1" || d.key == "822"){
+                    //MERCEDES
+                    return "#00D2BE";
+                }
+                if(d.key == "830" || d.key == "813"){
+                    //REDBULL
+                    return "#0600EF";
+                }
+                if(d.key == "832" || d.key == "844"){
+                    //FERRARI
+                    return "#DC0000";
+                }
+                if(d.key == "4" || d.key =="839"){
+                    //ALPINE
+                    return "#0090FF";
+                }
+                if(d.key == "842" || d.key == "852"){
+                    //ALPHATAURI
+                    return "#2B4562";
+                }
+                if(d.key == "8" || d.key == "841"){
+                    //ALFAROMEO
+                    return "#900000";
+                }
+                if(d.key == "849" || d.key == "847"){
+                    //WILLIAMS
+                    return "#005AFF";
+                }
+                if(d.key == "854" || d.key == "853"){
+                    //HAAS
+                    return "#D9D9D9";
+                }
+                if(d.key == "20" || d.key == "840"){
+                    //ASTONMARTIN
+                    return "#006F62";
+                }
+
+                else return "black";
             }).attr("transform", "translate(20, 30)");
 })
 
