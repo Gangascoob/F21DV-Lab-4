@@ -123,7 +123,6 @@ dataNest.forEach(function(d,i){
             .attr("transform", "translate(20, 30)");
 
     svgrace.selectAll("dot")
-            .enter()
             .append("circle")
             .attr("r", 2)
             .attr("cx", function(d){return x(+d.lap);})
