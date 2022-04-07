@@ -15,7 +15,8 @@ function racegraph(data){
 var svgrace = d3.select("#driverpos")
                 .append("svg")
                 .attr("width", "90%")
-                .attr("height", "90%");
+                .attr("height", "90%")
+                .attr("id", "linesvg");
 
 const g = svgrace.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
@@ -33,7 +34,7 @@ yScale = d3.scaleLinear().domain([0, yMax]).range(["90%", 0]);
 xAxis = d3.axisBottom()
     .scale(xScale)
 
-d3.select("svg")
+d3.select("#linesvg")
     .append("g")
     .attr("class", "axis")
     .attr("transform", "translate(0,620)")
@@ -48,7 +49,7 @@ yAxis = d3.axisLeft()
     .scale(yScale)
     .ticks(10)
 
-d3.select('svg')
+d3.select('#linesvg')
     .append("g")
     .attr("class", "axis")
     .attr("transform", `translate(${margin.left},20)`) //use variable in translate
