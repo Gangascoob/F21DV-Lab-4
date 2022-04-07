@@ -18,3 +18,13 @@ function drivertooltip(data){
         }
     }
 }
+
+
+function MercCheck(){
+var checkbox = document.getElementsByName("mercedes");
+if (checkbox[0].checked){
+    d3.select("#mercedes").transition().attr("stroke", "white");
+} 
+else d3.select("#mercedes").transition().attr("stroke", "#00D2BE");
+
+}
