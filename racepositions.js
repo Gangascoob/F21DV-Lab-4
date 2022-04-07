@@ -17,13 +17,13 @@ for(i=0; i<filteredracedata.length; i++){
 racedata.push({id: filteredracedata[i].id, driver: filteredracedata[i].driver, lap: filteredracedata[i].lap, position: filteredracedata[i].position});
 }
 
-
+groupedracedata = d3.group(racedata, d=>d.driver);
 
 //console.log(groupedracedata.get("1"));
 
 });
 console.log(racedata);
 
-groupedracedata = d3.group(racedata, d=>d.driver);
+
 
 console.log(groupedracedata);
