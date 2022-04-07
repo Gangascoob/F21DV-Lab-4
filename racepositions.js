@@ -18,11 +18,13 @@ racedata.push({id: filteredracedata[i].id, driver: filteredracedata[i].driver, l
 }
 
 groupedracedata = d3.group(racedata, d=>d.driver);
+console.log(groupedracedata);
+
 
 //console.log(groupedracedata.get("1"));
 
 });
-console.log(racedata);
+
 
 
 
