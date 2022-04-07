@@ -6,7 +6,7 @@ var l;
 
 
 
-var div = d3.select("#driverpos").append("div")	
+var div = d3.select("#linesvg").append("div")	
     .attr("class", "tooltip")				
     .style("opacity", 0);
 
