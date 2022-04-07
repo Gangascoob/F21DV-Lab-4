@@ -55,10 +55,10 @@ const x = d3.scaleLinear()
 
 const y = d3.scaleLinear()
             .domain([ yExtent[0], yExtent[1]])
-            .range([300,0]);
+            .range([320,0]);
 
 svgrace.append("g")
-        .attr("transform", "translate(20," + 350 +")")
+        .attr("transform", "translate(20," + 320 +")")
         .call(d3.axisBottom(x));
 
 svgrace.append("g")
