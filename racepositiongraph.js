@@ -69,8 +69,8 @@ var dataNest = Array.from(d3.group(racedata, d=>d.driver), ([key, value]) => ({k
 console.log(dataNest);
 
 var linefunction = d3.line()
-                     .x(function(d){return x(d.lap);})
-                     .y(function(d){return y(d.position);});
+                     .x(function(d){return x(+d.lap);})
+                     .y(function(d){return y(+d.position);});
 
 dataNest.forEach(function(d,i){
     svgrace.append("path")
