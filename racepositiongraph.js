@@ -61,12 +61,19 @@ svgrace.append("g")
     .attr("transform", "translate(20, 30)");
     //.attr("transform", "translate(20, 0)");
 
-var groupedracedata = d3.groups(racedata, d=>d.driver);
+var groupedracedata = d3.group(racedata, d=>d.driver);
 
 console.log(groupedracedata);
 
-var res = groupedracedata.map(function(d){return d.driver});
-console.log(res);
+var dataNest = Array.from(d3.group(racedata, d=>d.driver), ([key, value]) => ({key, value}));
+console.log(dataNest);
+
+
+
+
+
+
+
 
 svgrace.selectAll(".line")
         .append("g")
