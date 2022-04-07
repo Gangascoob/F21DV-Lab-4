@@ -54,7 +54,7 @@ const x = d3.scaleLinear()
             .range([0,420]);
 
 const y = d3.scaleLinear()
-            .domain([ yExtent[0], yExtent[1]])
+            .domain([ yExtent[1], yExtent[0]])
             .range([280,0]);
 
 svgrace.append("g")
