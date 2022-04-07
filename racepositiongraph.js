@@ -88,7 +88,7 @@ dataNest.forEach(function(d,i){
                     //MERCEDES
                     return "#00D2BE";
                 }
-                if(d.key == "830" || d.key == "813"){
+                if(d.key == "830" || d.key == "815"){
                     //REDBULL
                     return "#0600EF";
                 }
@@ -104,7 +104,7 @@ dataNest.forEach(function(d,i){
                     //ALPHATAURI
                     return "#2B4562";
                 }
-                if(d.key == "8" || d.key == "841"){
+                if(d.key == "8" || d.key == "841" || d.key == "9"){
                     //ALFAROMEO
                     return "#900000";
                 }
