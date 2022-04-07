@@ -133,7 +133,7 @@ dataNest.forEach(function(d,i){
 
 function mouseoverline(e, data){
     
-    console.log(data);
+    console.log(e);
     div.transition()
         .duration(100)
         .style("opacity", .9);
