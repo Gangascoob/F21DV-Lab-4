@@ -25,3 +25,4 @@ racedata[i] = [{id: filteredracedata[i].id, driver: filteredracedata[i].driver, 
 
 });
 console.log(filteredracedata);
+console.log(racedata);
