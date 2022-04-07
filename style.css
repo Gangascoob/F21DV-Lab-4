@@ -86,3 +86,8 @@
 	grid-area: wdcwcc;
 	box-shadow: 1px 1px 1px 1px rgb(217, 217, 217);
 }
+
+.axis line{
+	stroke: black;
+	stroke-width: 1.5px;
+}

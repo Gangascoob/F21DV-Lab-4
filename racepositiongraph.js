@@ -61,8 +61,23 @@ svgrace.append("g")
     .attr("transform", "translate(20, 30)");
     //.attr("transform", "translate(20, 0)");
 
+var groupedracedata = d3.groups(racedata, d=>d.driver);
 
 
+
+svgrace.selectAll(".line")
+        .append("g")
+        .attr("class", "line")
+        .data(groupedracedata)
+        .enter()
+        .append("path")
+        .attr("d", function(d){
+            return d3.line().x(d=>x(d.lap))
+                            .y(d=>y(d.position))
+        })
+        .attr("fill", "none")
+        .attr("stroke", "black")
+        .attr("stroke-width", 2);
 
 
 
