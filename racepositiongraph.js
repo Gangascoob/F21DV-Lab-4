@@ -90,7 +90,7 @@ var linefunction = d3.line()
 ;
 
 
-dataNest.forEach(function(d,i){
+//dataNest.forEach(function(d,i){
 
     var u = svgrace.selectAll(".line")
                     .data(data, function(d){return d})
@@ -156,7 +156,7 @@ dataNest.forEach(function(d,i){
             .attr("transform", "translate(50, 30)");
 
     
-})
+//})
 
 function idselector(d){
 
