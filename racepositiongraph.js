@@ -93,7 +93,7 @@ var linefunction = d3.line()
 dataNest.forEach(function(d,i){
 
     var u = svgrace.selectAll(".line")
-                    .data(d)
+    ;                
 
         u.enter()
             .append("path")
