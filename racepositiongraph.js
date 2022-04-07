@@ -8,18 +8,40 @@ var l;
 
 var div = d3.select("#linesvg").append("div")	
     .attr("class", "tooltip")				
-    .style("opacity", 0);
-
-
-
-function racegraph(data){
+    .style("opacity", 0)
+;
 
 var svgrace = d3.select("#driverpos")
                 .append("svg")
                 .attr("width", "150%")
                 .attr("height", "120%")
                 .attr("id", "linesvg")
-                .append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+                .append("g").attr("transform", `translate(${margin.left},${margin.top})`)
+;
+
+
+var x = d3.scaleLinear().range([0, 700])
+var xAxis = d3.axisBottom().scale(x);
+svgrace.append("g")
+        .attr("transform", "translate(0, 280)")
+        .attr("class", "myXaxis")
+;
+
+var y = d3.scaleLinear().range([280, 0]);
+var yAxis = d3.axisLeft().scale(y);
+svgrace.append("g")
+        .attr("class","myYaxis")
+;
+
+
+
+function updategraph(data){
+
+
+
+
+
+
 
 let laps = [];
 let positions = [];
@@ -41,33 +63,43 @@ var xExtent = d3.extent(lapnumbers);
 
 
 
-const x = d3.scaleLinear()
-            .domain([ xExtent[0], xExtent[1]])
-            .range([0,700]);
 
-const y = d3.scaleLinear()
-            .domain([ yExtent[1], yExtent[0]])
-            .range([280,0]);
+x.domain([ xExtent[0], xExtent[1]]);
+svgrace.selectAll(".myXaxis").transition()
+    .duration(1500)
+    .call(xAxis)
+;
+           
+
+
+y.domain([ yExtent[1], yExtent[0]])
+svgrace.selectAll(".myYaxis").transition()
+        .duration(1500)
+        .call(yAxis)
+;
+            
 
 svgrace.append("g")
         .attr("transform", "translate(50," + 310 +")")
-        .call(d3.axisBottom(x).ticks((xExtent[1])/2).tickSize(2));
+        .attr("class", "xaxis")
+        .call(d3.axisBottom(x).ticks((xExtent[1])/2).tickSize(2))
+;
+        
 
 svgrace.append("g")
     .call(d3.axisLeft(y).ticks(yExtent[1]))
-    .attr("transform", "translate(50, 30)");
-    //.attr("transform", "translate(20, 0)");
-
-var groupedracedata = d3.group(racedata, d=>d.driver);
-
-
+    .attr("class", "yaxis")
+    .attr("transform", "translate(50, 30)")
+;
 
 var dataNest = Array.from(d3.group(racedata, d=>d.driver), ([key, value]) => ({key, value}));
 
 
 var linefunction = d3.line()
                      .x(function(d){return x(+d.lap);})
-                     .y(function(d){return y(+d.position);});
+                     .y(function(d){return y(+d.position);})
+;
+
 
 dataNest.forEach(function(d,i){
     svgrace.append("path")
