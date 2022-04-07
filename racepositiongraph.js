@@ -128,17 +128,17 @@ dataNest.forEach(function(d,i){
             .attr("r", 2)
             .attr("cx", function(d){return x(+d.lap);})
             .attr("cy", function(d){return y(+d.position);})
-            .on("mouseover", mouseoverline(d.key));
+            .on("mouseover", mouseoverline);
 })
 
-function mouseoverline(e, data){
+function mouseoverline(e, d){
     
-    console.log(e);
+    console.log(d.key);
     div.transition()
         .duration(100)
         .style("opacity", .9);
     div.html(function(){
-        drivertooltip(data);
+        drivertooltip(d.key);
         });
     console.log("test");
         
