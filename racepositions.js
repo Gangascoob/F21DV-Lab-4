@@ -27,7 +27,7 @@ groupedracedata = d3.groups(racedata, d=>d.driver);
 
 
 setTimeout(function(){
-    console.log(racedata);
+    console.log(groupedracedata);
     racegraph(racedata);
 }, 1500);
 
