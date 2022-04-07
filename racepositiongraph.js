@@ -79,7 +79,7 @@ dataNest.forEach(function(d,i){
             
             .attr("stroke-width", 1.5)
             .attr("d", linefunction(d.value))
-            .attr("stroke", function(d,i){
+            .attr("stroke", function(){
                 if(d.key == "846" || d.key == "817"){
                     return "#FF9E1B";
                 }
