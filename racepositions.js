@@ -29,6 +29,8 @@ racedata.push({id: filteredracedata[i].id, driver: filteredracedata[i].driver, l
 setTimeout(function(){
     
     racegraph(racedata);
+    console.log("start");
     d3.select("#ferrari").attr("stroke", "white");
+    console.log("finish");
 }, 1500);
 
