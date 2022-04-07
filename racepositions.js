@@ -21,7 +21,7 @@ racedata.push({id: filteredracedata[i].id, driver: filteredracedata[i].driver, l
 
 
 
-//console.log(groupedracedata.get("1"));
+
 
 });
 

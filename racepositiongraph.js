@@ -60,10 +60,10 @@ svgrace.append("g")
 
 var groupedracedata = d3.group(racedata, d=>d.driver);
 
-console.log(groupedracedata);
+
 
 var dataNest = Array.from(d3.group(racedata, d=>d.driver), ([key, value]) => ({key, value}));
-console.log(dataNest);
+
 
 var linefunction = d3.line()
                      .x(function(d){return x(+d.lap);})
@@ -120,11 +120,12 @@ dataNest.forEach(function(d,i){
 
                 else return "black";
             }).attr("transform", "translate(20, 30)")
-            .on("mouseover", mouseoverline(d.key))
+            .on("mouseOver", mouseoverline(d.key))
             .on("mouseout", function(){
                 div.transition()
                 .duration(500)
                 .style("opacity", 0);
+                console.log("test2");
             })
 })
 
