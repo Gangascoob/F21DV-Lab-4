@@ -6,7 +6,9 @@ var l;
 
 
 
-
+var div = d3.select("#driverpos").append("div")	
+    .attr("class", "tooltip")				
+    .style("opacity", 0);
 
 
 
@@ -15,17 +17,12 @@ function racegraph(data){
 var svgrace = d3.select("#driverpos")
                 .append("svg")
                 .attr("width", "150%")
-                .attr("height", "100%")
+                .attr("height", "120%")
                 .attr("id", "linesvg")
                 .append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
 let laps = [];
 let positions = [];
-
-/*
-var xExtent = [d3.min(data.lap), d3.max(data.lap)];
-console.log(xExtent);
-*/
 
 
 for(i=0; i<data.length; i++){
@@ -122,10 +119,27 @@ dataNest.forEach(function(d,i){
                 }
 
                 else return "black";
-            }).attr("transform", "translate(20, 30)");
+            }).attr("transform", "translate(20, 30)")
+            .on("mouseover", mouseoverline(d.key))
+            .on("mouseout", function(d){
+                div.transition()
+                .duration(500)
+                .style("opacity", 0);
+            })
 })
 
+function mouseoverline(data){
+    
+    div.transition()
+        .duration(200)
+        .style("opacity", .9);
+    div.html(function(){
+        drivertooltip(data);
+        })
+        .style("left", (d3.event.pageX) + "px")
+        .style("right", (d3.event.pageY) + "px");
 
+}
 
 
 
