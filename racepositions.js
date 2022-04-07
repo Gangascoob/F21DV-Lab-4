@@ -1,7 +1,7 @@
 let sampledata = [];
 let filteredracedata = [];
 let racedata = [];
-let groupedracedata = [];
+var groupedracedata = [];
 var raceidselect;
 
 raceidselect = 1061;
