@@ -15,7 +15,7 @@ function racegraph(data){
 var svgrace = d3.select("#driverpos")
                 .append("svg")
                 .attr("width", "90%")
-                .attr("height", "90%")
+                .attr("height", "100%")
                 .attr("id", "linesvg")
                 .append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
@@ -58,12 +58,12 @@ const y = d3.scaleLinear()
             .range([280,0]);
 
 svgrace.append("g")
-        .attr("transform", "translate(20," + 280 +")")
-        .call(d3.axisBottom(x).ticks(maxlaps));
+        .attr("transform", "translate(20," + 310 +")")
+        .call(d3.axisBottom(x).ticks(maxlaps).tickSize(4));
 
 svgrace.append("g")
     .call(d3.axisLeft(y))
-    .attr("transform", "translate(20, 20)");
+    .attr("transform", "translate(20, 30)");
     //.attr("transform", "translate(20, 0)");
 
 
