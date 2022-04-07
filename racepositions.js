@@ -13,7 +13,7 @@ filteredracedata = sampledata.filter(function(d){return d.id == raceidselect});
 
 
 
-racedata = [{id: filteredracedata.raceId, driver: filteredracedata.driverId, lap: filteredracedata.lap, position: filteredracedata.position}];
+racedata.push({id: filteredracedata.raceId, driver: filteredracedata.driverId, lap: filteredracedata.lap, position: filteredracedata.position});
 
 });
 console.log(racedata);
