@@ -93,6 +93,7 @@ var linefunction = d3.line()
 dataNest.forEach(function(d,i){
 
     var u = svgrace.selectAll(".line")
+                    .data(data, function(d){return d})
     ;                
 
         u.enter()
@@ -151,7 +152,7 @@ dataNest.forEach(function(d,i){
             .attr("id", function(){
                 return idselector(d);
             })
-            .attr("opacity", 0)
+            .attr("opacity", 1)
             .attr("transform", "translate(50, 30)");
 
     
