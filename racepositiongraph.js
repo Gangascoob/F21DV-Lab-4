@@ -32,7 +32,7 @@ var y = d3.scaleLinear().range([280, 0]);
 var yAxis = d3.axisLeft().scale(y);
 svgrace.append("g")
         .attr("class","myYaxis")
-        .attr("transform", "translate(50,30")
+        .attr("transform", "translate(50,30)")
 ;
 
 
