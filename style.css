@@ -96,6 +96,10 @@
 	pointer-events: all;
 }
 
+.team{
+	opacity: 0;
+}
+
 div.tooltip {	
     position: absolute;			
     text-align: center;			
