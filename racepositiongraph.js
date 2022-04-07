@@ -121,7 +121,7 @@ dataNest.forEach(function(d,i){
                 else return "black";
             })
             .attr("id", function(){
-                idselector(d.key);
+                idselector(d);
             })
             .attr("transform", "translate(20, 30)");
 
