@@ -38,7 +38,7 @@ var maxlaps = d3.max(laps);
 console.log(minlaps + " " + maxlaps);
 
 var yExtent = d3.extent(data, d => d.position);
-console.log(yExtent);
+
 const x = d3.scaleLinear()
             .domain([ minlaps, maxlaps])
             .range([0,300]);
