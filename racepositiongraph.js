@@ -1,4 +1,4 @@
-const margin = { top: 10, bottom: 10, left: 10, right: 20 };
+const margin = { top: 5, bottom: 5, left: 5, right: 5 };
 
 
 
@@ -16,30 +16,32 @@ var svgrace = d3.select("#driverpos")
                 .append("svg")
                 .attr("width", "90%")
                 .attr("height", "90%")
-                .attr("id", "linesvg");
-
-const g = svgrace.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+                .attr("id", "linesvg")
+                .append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
 
 
 var xExtent = d3.extent(data, d => d.lap);
-x = d3.scaleLinear().domain([xExtent[0], xExtent[1]]).range([0, 400]);
+var yExtent = d3.extent(data, d => d.position);
 
-var yMax = d3.max(data, d=>d.position);
-yScale = d3.scaleLinear().domain([0, yMax]).range([300, 0]);
+const x = d3.scaleLinear()
+            .domain([ xExtent[0], xExtent[1]])
+            .range([0,300]);
+
+const y = d3.scaleLinear()
+            .domain([ yExtent[0], yExtent[1]])
+            .range([300,0]);
+
+svgrace.append("g")
+        .attr("transform", "translate(0," + 250 +")")
+        .call(d3.axisBottom(x));
+
+svg.append("g")
+    .call(d3.axisLeft(y));
 
 
 
 
-xAxis = svgrace.append("g")
-                .call(d3.axisBottom(x))
-                .ticks(50)
-                .attr("transform", "translate(0, 250)");
-
-yAxis = svgrace.append("g")
-                .call(d3.axisLeft(yScale))
-                .ticks(20);
-                
 
 
 
