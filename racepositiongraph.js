@@ -120,15 +120,15 @@ dataNest.forEach(function(d,i){
 
                 else return "black";
             }).attr("transform", "translate(20, 30)")
-            .on("mouseover", mouseoverline(event, d.key))
-            .on("mouseout", function(d){
+            .on("mouseover", mouseoverline(d.key))
+            .on("mouseout", function(){
                 div.transition()
                 .duration(500)
                 .style("opacity", 0);
             })
 })
 
-function mouseoverline(event, data){
+function mouseoverline(data){
     
     div.transition()
         .duration(100)
