@@ -23,8 +23,8 @@ function drivertooltip(data){
 function MercCheck(){
 var checkbox = document.getElementsByName("mercedes");
 if (checkbox[0].checked){
-    d3.selectAll("#mercedes").transition().duration(500).attr("stroke", "white");
+    d3.selectAll("#mercedes").transition().duration(500).attr("opacity", 0);
 } 
-else d3.selectAll("#mercedes").transition().duration(500).attr("stroke", "#00D2BE");
+else d3.selectAll("#mercedes").transition().duration(500).attr("opacity", 1);
 
 }
