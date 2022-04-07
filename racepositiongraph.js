@@ -68,13 +68,26 @@ console.log(groupedracedata);
 var dataNest = Array.from(d3.group(racedata, d=>d.driver), ([key, value]) => ({key, value}));
 console.log(dataNest);
 
+var linefunction = d3.line()
+                     .x(function(d){return x(d.lap);})
+                     .y(function(d){return y(d.position);});
+
+dataNest.forEach(function(d,i){
+    svgrace.append("path")
+            .attr("class", "line")
+            .attr("d", linefunction(d.value));
+})
 
 
 
 
 
+}
 
 
+
+
+/*
 svgrace.selectAll(".line")
         .append("g")
         .attr("class", "line")
@@ -89,10 +102,8 @@ svgrace.selectAll(".line")
         .attr("stroke", "black")
         .attr("stroke-width", 2);
 
+*/
 
-
-
-}
 
 
 
