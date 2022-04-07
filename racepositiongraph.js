@@ -55,10 +55,10 @@ const x = d3.scaleLinear()
 
 const y = d3.scaleLinear()
             .domain([ yExtent[0], yExtent[1]])
-            .range([320,0]);
+            .range([280,0]);
 
 svgrace.append("g")
-        .attr("transform", "translate(20," + 320 +")")
+        .attr("transform", "translate(20," + 300 +")")
         .call(d3.axisBottom(x).ticks(maxlaps));
 
 svgrace.append("g")
