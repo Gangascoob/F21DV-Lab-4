@@ -173,7 +173,7 @@ function idselector(d){
     }
 }
 
-d3.select("#ferrari").attr("stroke", "white");
+
 
 }
 
