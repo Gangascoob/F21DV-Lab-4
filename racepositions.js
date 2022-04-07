@@ -31,7 +31,7 @@ function loadnext(){
     racefilter();
 
     setTimeout(function(){
-        racegraph(racedata);
+        updategraph(racedata);
     }, 1500);
 
 };
@@ -39,5 +39,5 @@ function loadnext(){
 
 racefilter();
 setTimeout(function(){
-    racegraph(racedata);
+    updategraph(racedata);
 }, 1000);
