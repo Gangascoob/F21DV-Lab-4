@@ -21,7 +21,7 @@ var svgrace = d3.select("#driverpos")
 
 
 
-var xExtent = d3.extent(data, d => d.lap);
+var xExtent = [d3.min(data.lap), d3.max(data.lap)];
 console.log(xExtent);
 var yExtent = d3.extent(data, d => d.position);
 console.log(yExtent);
