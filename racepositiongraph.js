@@ -54,7 +54,7 @@ const y = d3.scaleLinear()
 
 svgrace.append("g")
         .attr("transform", "translate(20," + 310 +")")
-        .call(d3.axisBottom(x).ticks(xExtent[1]).tickSize(4));
+        .call(d3.axisBottom(x).ticks(xExtent[1]).tickSize(2));
 
 svgrace.append("g")
     .call(d3.axisLeft(y).ticks(yExtent[1]))
