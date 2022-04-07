@@ -135,9 +135,8 @@ function mouseoverline(event, data){
         .style("opacity", .9);
     div.html(function(){
         drivertooltip(data);
-        })
-        .style("left", (event.offsetX) + "px")
-        .style("right", (event.offsetY) + "px");
+        });
+        
 
 }
 
