@@ -23,14 +23,16 @@ var svgrace = d3.select("#driverpos")
 var x = d3.scaleLinear().range([0, 700])
 var xAxis = d3.axisBottom().scale(x);
 svgrace.append("g")
-        .attr("transform", "translate(0, 280)")
+        .attr("transform", "translate(50, 310)")
         .attr("class", "myXaxis")
+        
 ;
 
 var y = d3.scaleLinear().range([280, 0]);
 var yAxis = d3.axisLeft().scale(y);
 svgrace.append("g")
         .attr("class","myYaxis")
+        .attr("transform", "translate(50,30")
 ;
 
 
@@ -102,10 +104,17 @@ var linefunction = d3.line()
 
 
 dataNest.forEach(function(d,i){
-    svgrace.append("path")
+
+    var u = svgrace.selectAll(".line")
+                    .data(d)
+
+        u.enter()
+            .append("path")
             .attr("class", "line")
+            .merge(u)
+            .transition()
+            .duration(1500)
             .attr("fill", "none")
-            
             .attr("stroke-width", 1.5)
             .attr("d", linefunction(d.value))
             .attr("stroke", function(){
