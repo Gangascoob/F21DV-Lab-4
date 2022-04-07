@@ -15,8 +15,8 @@ filteredracedata = sampledata.filter(function(d){return d.id == raceidselect});
 
 
 for(i=0; i<filteredracedata.length; i++){
-racedata[i] = [{id: filteredracedata[i].id, driver: filteredracedata[i].driver, lap: filteredracedata[i].lap, position: filteredracedata[i].position}]
-
+//racedata[i] = [{id: filteredracedata[i].id, driver: filteredracedata[i].driver, lap: filteredracedata[i].lap, position: filteredracedata[i].position}];
+racedata.push({id: filteredracedata[i].id, driver: filteredracedata[i].driver, lap: filteredracedata[i].lap, position: filteredracedata[i].position});
 }
 
 
