@@ -59,7 +59,7 @@ const y = d3.scaleLinear()
 
 svgrace.append("g")
         .attr("transform", "translate(20," + 320 +")")
-        .call(d3.axisBottom(x));
+        .call(d3.axisBottom(x).ticks(maxlaps));
 
 svgrace.append("g")
     .call(d3.axisLeft(y))
