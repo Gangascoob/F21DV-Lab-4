@@ -22,4 +22,4 @@ groupedracedata = d3.group(racedata, d=>d.driver);
 console.log(groupedracedata);
 
 });
-console.log(racedata);
+//console.log(racedata);
