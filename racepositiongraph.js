@@ -30,12 +30,19 @@ console.log(xExtent);
 for(i=0; i<data.length; i++){
     laps.push(data[i].lap)
 }
+
+
 console.log(laps);
 
-var minlaps = d3.min(laps);
+
+setTimeout(function(){
+    var minlaps = d3.min(laps);
 var maxlaps = d3.max(laps);
 
 console.log(minlaps + " " + maxlaps);
+}, 1500);
+
+
 
 var yExtent = d3.extent(data, d => d.position);
 
