@@ -29,13 +29,7 @@ racedata.push({id: filteredracedata[i].id, driver: filteredracedata[i].driver, l
 setTimeout(function(){
     
     racegraph(racedata);
-    
-    var myelement = document.getElementById("ferrari");
-    if(myelement){
-        var myelevalue = myelement.value;
-    }
-    console.log(myelevalue);
-
+    d3.select("#ferrari").attr("stroke", "white");
     }
 
 , 1500);
