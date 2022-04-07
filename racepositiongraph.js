@@ -90,7 +90,7 @@ dataNest.forEach(function(d,i){
                 }
                 if(d.key == "830" || d.key == "815"){
                     //REDBULL
-                    return "#0600EF";
+                    return "#0508a8";
                 }
                 if(d.key == "832" || d.key == "844"){
                     //FERRARI
