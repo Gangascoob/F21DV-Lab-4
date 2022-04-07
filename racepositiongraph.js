@@ -26,21 +26,19 @@ var xExtent = d3.extent(data, d => d.lap);
 x = d3.scaleLinear().domain([xExtent[0], xExtent[1]]).range([0, 400]);
 
 var yMax = d3.max(data, d=>d.position);
-yScale = d3.scaleLinear().domain([0, yMax]).range([400, 0]);
+yScale = d3.scaleLinear().domain([0, yMax]).range([300, 0]);
 
 
 
 
 xAxis = svgrace.append("g")
                 .call(d3.axisBottom(x))
+                .ticks(50)
                 .attr("transform", "translate(0, 250)");
-/*    
-yAxis = d3.axisLeft()
-    .scale(yScale)
-    .ticks(10)
-*/
+
 yAxis = svgrace.append("g")
-                .call(d3.axisLeft(yScale));
+                .call(d3.axisLeft(yScale))
+                .ticks(20);
                 
 
 
