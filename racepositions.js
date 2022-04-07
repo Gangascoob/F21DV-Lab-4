@@ -11,7 +11,7 @@ sampledata.push({id: data.raceId, driver: data.driverId, lap: data.lap, position
 }).then(function filter(){
 filteredracedata = sampledata.filter(function(d){return d.id == raceidselect});
 
-console.log(filteredracedata);
+
 
 
 for(i=0; i<filteredracedata.length; i++){
@@ -22,6 +22,6 @@ racedata[i] = [{id: filteredracedata[i].id, driver: filteredracedata[i].driver, 
 
 
 //racedata.push({id: filteredracedata.id, driver: filteredracedata.driver, lap: filteredracedata.lap, position: filteredracedata.position});
-console.log(racedata);
-});
 
+});
+console.log(filteredracedata);
