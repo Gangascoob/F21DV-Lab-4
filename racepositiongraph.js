@@ -21,7 +21,7 @@ var svgrace = d3.select("#driverpos")
 
 let laps = [];
 let positions = [];
-let positionnumbers = [];
+
 /*
 var xExtent = [d3.min(data.lap), d3.max(data.lap)];
 console.log(xExtent);
@@ -35,22 +35,17 @@ for(i=0; i<data.length; i++){
     positions.push(data[i].position);
 }
 
-positionnumbers = positions.map(s => +s);
-
-
-var minlaps = d3.min(laps, s=>+s);
-var maxlaps = d3.max(laps, s=>+s);
-
-console.log(minlaps + " " + maxlaps);
-
+var positionnumbers = positions.map(s => +s);
+var lapnumbers = laps.map(s => +s);
 
 
 var yExtent = d3.extent(positionnumbers);
+var xExtent = d3.extent(lapnumbers);
 
 console.log(yExtent);
 
 const x = d3.scaleLinear()
-            .domain([ minlaps, maxlaps])
+            .domain([ xExtent[0], xExtent[1]])
             .range([0,500]);
 
 const y = d3.scaleLinear()
@@ -59,10 +54,10 @@ const y = d3.scaleLinear()
 
 svgrace.append("g")
         .attr("transform", "translate(20," + 310 +")")
-        .call(d3.axisBottom(x).ticks(maxlaps).tickSize(4));
+        .call(d3.axisBottom(x).ticks(xExtent[1]).tickSize(4));
 
 svgrace.append("g")
-    .call(d3.axisLeft(y))
+    .call(d3.axisLeft(y).ticks(yExtent[1]))
     .attr("transform", "translate(20, 30)");
     //.attr("transform", "translate(20, 0)");
 
