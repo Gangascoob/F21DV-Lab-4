@@ -23,25 +23,26 @@ const g = svgrace.append("g").attr("transform", `translate(${margin.left},${marg
 
 
 var xExtent = d3.extent(data, d => d.lap);
-xScale = d3.scaleLinear().domain(xExtent).range([0, "90%"]);
+x = d3.scaleLinear().domain([xExtent[0], xExtent[1]]).range([0, 400]);
 
 var yMax = d3.max(data, d=>d.position);
-yScale = d3.scaleLinear().domain([0, yMax]).range(["90%", 0]);
+yScale = d3.scaleLinear().domain([0, yMax]).range([400, 0]);
 
 
 
 //draw xAxis and xAxis label
-xAxis = d3.axisBottom()
-    .scale(xScale)
+xAxis = svgrace.append("g")
+                .call(d3.axisBottom(x));
+    
 
 d3.select("#linesvg")
     .append("g")
     .attr("class", "axis")
-    .attr("transform", "translate(0,620)")
-    .call(xAxis)
+    .attr("transform", "translate(0,420)")
+    .call(x)
     .append("text")
-    .attr("x", (900+70)/2) //middle of the xAxis
-    .attr("y", "50") // a little bit below xAxis
+    .attr("x", (400+70)/2) //middle of the xAxis
+    .attr("y", "30") // a little bit below xAxis
     .text("Year")
 
 //yAxis and yAxis label
