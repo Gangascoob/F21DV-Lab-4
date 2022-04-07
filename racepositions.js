@@ -22,5 +22,6 @@ racedata.push({id: filteredracedata[i].id, driver: filteredracedata[i].driver, l
 //console.log(groupedracedata.get("1"));
 
 });
+console.log(racedata);
 groupedracedata = d3.groups(racedata, d=>d.driver);
 console.log(groupedracedata);
