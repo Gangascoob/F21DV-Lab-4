@@ -33,7 +33,7 @@ yScale = d3.scaleLinear().domain([0, yMax]).range([400, 0]);
 //draw xAxis and xAxis label
 xAxis = svgrace.append("g")
                 .call(d3.axisBottom(x))
-                .attr("transform", "translate(0, 400)");
+                .attr("transform", "translate(0, 90%)");
     
 
 svgrace.append("g")
