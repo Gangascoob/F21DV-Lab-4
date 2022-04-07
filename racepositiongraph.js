@@ -1,12 +1,9 @@
 const margin = { top: 40, bottom: 10, left: 40, right: 20 };
 
-var svgrace = d3.select("#driverpos")
-                .append("svg")
-                .attr("width", "90%")
-                .attr("height", "90%");
+
 
 var l;
-const g = svgbar.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
 
 
 
@@ -14,6 +11,14 @@ const g = svgbar.append("g").attr("transform", `translate(${margin.left},${margi
 
 
 function racegraph(data){
+
+var svgrace = d3.select("#driverpos")
+                .append("svg")
+                .attr("width", "90%")
+                .attr("height", "90%");
+
+const g = svgrace.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
 
 
 var xExtent = d3.extent(data, d => d.lap);
@@ -46,7 +51,7 @@ yAxis = d3.axisLeft()
 d3.select('svg')
     .append("g")
     .attr("class", "axis")
-    .attr("transform", `translate(${leftMargin},20)`) //use variable in translate
+    .attr("transform", `translate(${margin.left},20)`) //use variable in translate
     .call(yAxis)
     .append("text")
     .attr("transform", "rotate(-90)")
