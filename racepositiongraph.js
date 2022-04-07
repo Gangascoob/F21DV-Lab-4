@@ -136,8 +136,8 @@ function mouseoverline(data){
     div.html(function(){
         drivertooltip(data);
         })
-        .style("left", (d3.event.pageX) + "px")
-        .style("right", (d3.event.pageY) + "px");
+        .style("left", (d3.pointer[0]) + "px")
+        .style("right", (d3.pointer[1]) + "px");
 
 }
 
