@@ -81,19 +81,6 @@ svgrace.selectAll(".myYaxis").transition()
 ;
             
 
-svgrace.append("g")
-        .attr("transform", "translate(50," + 310 +")")
-        .attr("class", "xaxis")
-        .call(d3.axisBottom(x).ticks((xExtent[1])/2).tickSize(2))
-;
-        
-
-svgrace.append("g")
-    .call(d3.axisLeft(y).ticks(yExtent[1]))
-    .attr("class", "yaxis")
-    .attr("transform", "translate(50, 30)")
-;
-
 var dataNest = Array.from(d3.group(racedata, d=>d.driver), ([key, value]) => ({key, value}));
 
 
