@@ -28,7 +28,7 @@ console.log(xExtent);
 
 
 for(i=0; i<data.length; i++){
-    laps.push([data[i].lap])
+    laps.push(data[i].lap)
 }
 console.log(laps);
 
