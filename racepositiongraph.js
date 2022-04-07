@@ -129,6 +129,8 @@ dataNest.forEach(function(d,i){
 })
 
 function idselector(d){
+
+    console.log(d);
     if(d.key == "846" || d.key == "817"){
         //MCLAREN
         return "mclaren";
