@@ -17,8 +17,8 @@ const g = svgbar.append("g").attr("transform", `translate(${marginbar.left},${ma
 
 g.append("text")
         .attr("text-anchor", "end")
-        .attr("x", 200)
-        .attr("y", 10)
+        .attr("x", 250)
+        .attr("y", -40)
         .text("Constructors Championship Points")
 ;   
 
