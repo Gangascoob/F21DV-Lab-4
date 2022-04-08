@@ -177,5 +177,5 @@ rect {
   }
 
   #form{
-	  height: 28vh;
+	  overflow: auto;
   }
