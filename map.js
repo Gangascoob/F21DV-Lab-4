@@ -18,7 +18,7 @@ var path = d3.geoPath()
 			 .projection(projection);
 
 
-//reads and pushes circuit co-ordinates to array
+//reads and pushes circuit co-ordinates and names to separate arrays
 d3.csv("data/circuits2021.csv", function(data){
 
 	circuitmarks.push({lng: data.lng, lat: data.lat, circuitid: data.circuitId});
