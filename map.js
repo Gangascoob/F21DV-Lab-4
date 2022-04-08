@@ -74,14 +74,17 @@ if(circuitposition>(circuitidorder.length-1)){
 	circuitposition = circuitidorder.length - 1;
 	d3.select("#nextbut")
 		.text("")
+		.attr("disable","true")
 ;
 }
 else d3.select("#nextbut")
 		.text("Next Round")
+		.attr("disable", "false")
 ;
 
 d3.select("#prevbut")
-	.text("Previous Round");
+	.text("Previous Round")
+	.attr("disabled", "false");
 
 d3.select(".bannertext")
 	.text("Formula 1 2021 Season - Round " + (circuitposition + 1) + " - " + circuitnames[circuitposition]);
@@ -118,7 +121,9 @@ function prevcircuit(){
 			.attr("disabled", "false");
 
 	d3.select("#nextbut")
-		.text("Next Round");
+		.text("Next Round")
+		.attr("disable","false")
+	;
 
 	d3.select(".bannertext")
 		.text("Formula 1 2021 Season - Round " + (circuitposition + 1) + " - " + circuitnames[circuitposition]);
