@@ -87,7 +87,12 @@ function updatebar(data){
           .attr("width", function(d){ return xscale(+d.points);})
           .attr("y", function(d){ return yscale(d.constructor);});
           
-      rect.select("title").text(d.points)
+    rect.select("title").text(function(d){
+            if(d.constructor == "9"){
+                return "Red Bull";
+            }
+            else return "test";
+        });     
       
       
 };
