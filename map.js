@@ -31,7 +31,7 @@ var svg = d3.select("#mapcontainer")
 	.attr("width", "100%")
 	.attr("height", "90%");
 
-//reads through json data and 
+//reads through json data and draws map based on co-ordinates. Circle marks are placed at co-ordinates of circuits using the circuitmarks array.
 d3.json("worldmap.json").then(function(json){
 
     svg.selectAll("path")
@@ -61,10 +61,13 @@ d3.json("worldmap.json").then(function(json){
 
 
 
-
+//moves to the next circuit in the array
 function nextcircuit(){
+
+//counts up the circuitposition variable
 circuitposition++;
 
+//if variable goes above the 
 if(circuitposition>(circuitidorder.length-1)){
 	circuitposition = circuitidorder.length - 1;
 	d3.select("#nextbut")

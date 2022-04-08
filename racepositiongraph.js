@@ -47,8 +47,8 @@ svgrace.append("text")
 svgrace.append("text")
         .attr("text-anchor", "end")
         .attr("transform", "rotate(-90)")
-        .attr("x", 10)
-        .attr("y", 150)
+        .attr("x", -50)
+        .attr("y", 250)
         .text("Driver Position")
 ;
 
