@@ -7,7 +7,7 @@ const margin = { top: 5, bottom: 5, left: 5, right: 5 };
 //selects the driverpos div and appends svg
 var svgrace = d3.select("#driverpos")
                 .append("svg")
-                .attr("width", "150%")
+                .attr("width", "100%")
                 .attr("height", "120%")
                 .attr("id", "linesvg")
                 .append("g").attr("transform", `translate(${margin.left},${margin.top})`)
@@ -103,9 +103,6 @@ dataNest.forEach(function(d,i){
         svgrace.append("path")
             .attr("class", "line")
             .transition()
-            .delay(function(d, i){
-                return i * 75;
-            })
             .attr("fill", "none")
             .attr("stroke-width", 1.5)
             .attr("d", linefunction(d.value))
