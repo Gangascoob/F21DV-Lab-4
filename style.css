@@ -175,3 +175,7 @@ rect {
   .axis {
 	font-size: smaller;
   }
+
+  #form{
+	  height: 28vh;
+  }
