@@ -71,32 +71,33 @@ var xExtent = d3.extent(lapnumbers);
 
 
 
-
+//sets domains of x-axis and y-axis based on the Extent arrays and transitions the axis values to the new ones.
 x.domain([ xExtent[0], xExtent[1]]);
 svgrace.selectAll(".myXaxis").transition()
     .duration(500)
     .call(xAxis)
 ;
            
-
-
 y.domain([ yExtent[1], yExtent[0]])
 svgrace.selectAll(".myYaxis").transition()
         .duration(500)
         .call(yAxis)
 ;
             
-
+//groups the data into driver-groups (e.g. all of driver 1's data is one group) and transforms into array.
 var dataNest = Array.from(d3.group(racedata, d=>d.driver), ([key, value]) => ({key, value}));
 
-
+//function for drawing lines - used later.
 var linefunction = d3.line()
                      .x(function(d){return x(+d.lap);})
                      .y(function(d){return y(+d.position);})
 ;
 
+//selects all current lines and removes them so that new ones can be drawn in.
 d3.selectAll(".line").transition().remove();
 
+//since data is in groups, forEach has to be run through it as the standard technique didn't work
+//this made it difficult to attempt to merge the data smoothly, hence simply removing the previous lines beforehand.
 dataNest.forEach(function(d,i){
 
         svgrace.append("path")
@@ -107,6 +108,8 @@ dataNest.forEach(function(d,i){
             .attr("stroke-width", 1.5)
             .attr("d", linefunction(d.value))
             .attr("stroke", function(){
+                //returns team specific colour based on driver id
+
                 if(d.key == "846" || d.key == "817"){
                     //MCLAREN
                     return "#FF8700";
@@ -151,14 +154,15 @@ dataNest.forEach(function(d,i){
                 else return "black";
             })
             .attr("id", function(){
+                //see idselector function
                 return idselector(d);
             })
             .attr("opacity", 1)
             .attr("transform", "translate(50, 30)");
 
     
-//})
 
+//attributes team id based on driver id.
 function idselector(d){
 
     

@@ -1,6 +1,7 @@
 let driverdata  = [];
 let alldriverscheck;
 
+//prepares driver data into a usable array.
 d3.csv("data/drivers2021.csv",function(data){
 driverdata.push({id: data.driverId, number: data.number, code: data.code, forename: data.forename, surname: data.surname});
 
@@ -8,14 +9,8 @@ driverdata.push({id: data.driverId, number: data.number, code: data.code, forena
 )
 
 
-
-function drivertooltip(data){
-    for(i=0; i<driverdata.length; i++){
-        if(driverdata[i].id == data){
-            return driverdata[i].forename + " " + driverdata[i].surname;
-        }
-    }
-}
+//Number of functions to help filter out data.
+//sets opacity of team's data to 0 if checked.
 
 
 function AllTeamsCheck(){
