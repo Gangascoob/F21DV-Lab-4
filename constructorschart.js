@@ -9,7 +9,8 @@ var temp;
 var svgbar = d3.select("#wdcwcc")
       		.append("svg")
                   .attr("width", barwidth)
-                  .attr("height", barheight);
+                  .attr("height", barheight)
+                  .attr("transform", "translate(50, 50)");
 
 //adds g element with margins.                 
 const g = svgbar.append("g").attr("transform", `translate(${marginbar.left},${marginbar.top})`);
