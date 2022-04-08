@@ -44,6 +44,10 @@ function loadnext(){
 
 //initial calls to load data on pageload
 racefilter();
+barchart(raceidselect);
+    setTimeout(function(){
+        updatebar(filteredDataBar);
+    }, 750);
 setTimeout(function(){
     updategraph(racedata);
 }, 500);
