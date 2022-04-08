@@ -41,7 +41,7 @@ temp = race;
 //Data is then filtered to only return the row with the matching name and dates.
 //Since this is only ever an array of length 1, we can target it easily to select only the data we want for the graph
 //and rearrange it into a better format for graphing use. 
-d3.csv("data/constructors2021", function(csv){
+d3.csv("data/constructors2021.csv", function(csv){
 data.push({constructor: csv.constructorId, race: csv.raceId, points: csv.points});			
 }).then(function filter(){
 filteredData = data.filter(function(d){return d.race});
