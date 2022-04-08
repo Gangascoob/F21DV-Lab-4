@@ -89,6 +89,7 @@ var linefunction = d3.line()
                      .y(function(d){return y(+d.position);})
 ;
 
+svg.selectAll(".line").remove();
 
 dataNest.forEach(function(d,i){
 
