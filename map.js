@@ -74,11 +74,11 @@ if(circuitposition>(circuitidorder.length-1)){
 	circuitposition = circuitidorder.length - 1;
 	d3.select("#nextbut")
 		.text("")
-		.attr("disabled", "true");
+;
 }
 else d3.select("#nextbut")
 		.text("Next Round")
-		.attr("disabled", "false");
+;
 
 d3.select("#prevbut")
 	.text("Previous Round");
@@ -109,11 +109,13 @@ function prevcircuit(){
 
 	if(circuitposition <= 0){
 		d3.select("#prevbut")
-		.text("");
+		.text("")
+		.attr("disabled", "true");
 		circuitposition = 0;
 	}
 	else d3.select("#prevbut")
-			.text("Previous Round");
+			.text("Previous Round")
+			.attr("disabled", "false");
 
 	d3.select("#nextbut")
 		.text("Next Round");
