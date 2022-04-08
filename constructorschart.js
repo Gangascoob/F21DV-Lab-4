@@ -1,5 +1,5 @@
 //various variables
-const marginbar = { top: 20, bottom: 20, left: 50, right: 20 };
+const marginbar = { top: 20, bottom: 20, left: 70, right: 20 };
 var barwidth = 500;
 var barheight = 250;
 var temp;
@@ -85,7 +85,53 @@ function updatebar(data){
       rect.transition()
                   .attr("height", (yscale.bandwidth() - 10))
           .attr("width", function(d){ return xscale(+d.points);})
-          .attr("y", function(d){ return yscale(d.constructor);});
+          .attr("y", function(d){ return yscale(d.constructor);})
+          .attr("fill",function(){
+            //returns team specific colour based on driver id
+
+            if(d.constructor == "Mclaren"){
+                //MCLAREN
+                return "#FF8700";
+            }
+            if(d.constructor == "Mercedes"){
+                //MERCEDES
+                return "#00D2BE";
+            }
+            if(d.constructor == "RedBull"){
+                //REDBULL
+                return "#0508a8";
+            }
+            if(d.constructor == "Ferrari"){
+                //FERRARI
+                return "#DC0000";
+            }
+            if(d.constructor == "Alpine"){
+                //ALPINE
+                return "#0044ff";
+            }
+            if(d.constructor == "AlphaTauri"){
+                //ALPHATAURI
+                return "#2B4562";
+            }
+            if(d.constructor == "AlfaRomeo"){
+                //ALFAROMEO
+                return "#490303";
+            }
+            if(d.constructor == "Williams"){
+                //WILLIAMS
+                return "#588ef1";
+            }
+            if(d.constructor == "Haas"){
+                //HAAS
+                return "#D9D9D9";
+            }
+            if(d.constructor == "AstonMartin"){
+                //ASTONMARTIN
+                return "#006F62";
+            }
+
+            else return "black";
+        });
           
     rect.select("title").text(function(d){
             return d.points;
