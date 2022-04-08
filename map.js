@@ -26,6 +26,7 @@ d3.csv("data/circuits2021.csv", function(data){
 })
 
 console.log(circuitnames);
+
 //appends map svg to its container
 var svg = d3.select("#mapcontainer")
 	.append("svg")
@@ -80,6 +81,8 @@ else d3.select("#nextbut")
 d3.select("#prevbut")
 	.text("Previous Round");
 
+d3.select(".bannertext")
+	.text("Round " + (circuitposition + 1) + " - " + circuitnames[circuitposition]);
 
 //Increases marker size of the current circuit to indicate that it's selected
 //also reduces marker size of previous circuit to the original size/colour

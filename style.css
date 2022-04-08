@@ -167,7 +167,6 @@ div.tooltip {
 }
 
 rect {
-	fill: steelblue;
 	fill-opacity: 0.8;
   }
   rect:hover {
