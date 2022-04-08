@@ -81,7 +81,7 @@ d3.select("#prevbut")
 	.text("Previous Round");
 
 d3.select(".bannertext")
-	.text("Round " + (circuitposition + 1) + " - " + circuitnames[circuitposition]);
+	.text("Formula 1 2021 Season - Round " + (circuitposition + 1) + " - " + circuitnames[circuitposition]);
 
 //Increases marker size of the current circuit to indicate that it's selected
 //also reduces marker size of previous circuit to the original size/colour
@@ -114,6 +114,9 @@ function prevcircuit(){
 
 	d3.select("#nextbut")
 		.text("Next Round");
+
+	d3.select(".bannertext")
+		.text("Formula 1 2021 Season - Round " + (circuitposition + 1) + " - " + circuitnames[circuitposition]);
 
 	d3.selectAll("#marker" + circuitidorder[circuitposition])
 		.transition()
