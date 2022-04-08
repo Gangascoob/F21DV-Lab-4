@@ -93,7 +93,7 @@ var linefunction = d3.line()
 //dataNest.forEach(function(d,i){
 
     var u = svgrace.selectAll(".line")
-                    .data(data, function(d){return d})
+                    .data(data)
     ;                
 
         u.enter()
