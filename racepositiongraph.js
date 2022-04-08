@@ -104,45 +104,45 @@ var linefunction = d3.line()
             .duration(1500)
             .attr("fill", "none")
             .attr("stroke-width", 1.5)
-            .attr("d", linefunction(data.value))
+            .attr("d", linefunction(dataNest.value))
             .attr("stroke", function(){
-                if(data.key == "846" || data.key == "817"){
+                if(dataNest.key == "846" || dataNest.key == "817"){
                     //MCLAREN
                     return "#FF8700";
                 }
-                if(data.key == "1" || data.key == "822"){
+                if(dataNest.key == "1" || dataNest.key == "822"){
                     //MERCEDES
                     return "#00D2BE";
                 }
-                if(data.key == "830" || data.key == "815"){
+                if(dataNest.key == "830" || dataNest.key == "815"){
                     //REDBULL
                     return "#0508a8";
                 }
-                if(data.key == "832" || data.key == "844"){
+                if(dataNest.key == "832" || dataNest.key == "844"){
                     //FERRARI
                     return "#DC0000";
                 }
-                if(data.key == "4" || data.key =="839"){
+                if(dataNest.key == "4" || dataNest.key =="839"){
                     //ALPINE
                     return "#0044ff";
                 }
-                if(data.key == "842" || data.key == "852"){
+                if(dataNest.key == "842" || dataNest.key == "852"){
                     //ALPHATAURI
                     return "#2B4562";
                 }
-                if(data.key == "8" || data.key == "841" || data.key == "9"){
+                if(dataNest.key == "8" || dataNest.key == "841" || dataNest.key == "9"){
                     //ALFAROMEO
                     return "#490303";
                 }
-                if(data.key == "849" || data.key == "847"){
+                if(dataNest.key == "849" || dataNest.key == "847"){
                     //WILLIAMS
                     return "#588ef1";
                 }
-                if(data.key == "854" || data.key == "853"){
+                if(dataNest.key == "854" || dataNest.key == "853"){
                     //HAAS
                     return "#D9D9D9";
                 }
-                if(data.key == "20" || data.key == "840"){
+                if(dataNest.key == "20" || dataNest.key == "840"){
                     //ASTONMARTIN
                     return "#006F62";
                 }
@@ -150,7 +150,7 @@ var linefunction = d3.line()
                 else return "black";
             })
             .attr("id", function(){
-                return idselector(data);
+                return idselector(dataNest);
             })
             .attr("opacity", 1)
             .attr("transform", "translate(50, 30)");
