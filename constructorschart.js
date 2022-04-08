@@ -1,5 +1,5 @@
 //various variables
-const marginbar = { top: 10, bottom: 10, left: 10, right: 10 };
+const marginbar = { top: 20, bottom: 20, left: 50, right: 20 };
 var barwidth = 400;
 var barheight = 250;
 var temp;
@@ -10,7 +10,7 @@ var svgbar = d3.select("#wdcwcc")
       		.append("svg")
                   .attr("width", barwidth)
                   .attr("height", barheight)
-                  .attr("transform", "translate(50, 50)");
+                  .attr("transform", "translate(5, 15)");
 
 //adds g element with margins.                 
 const g = svgbar.append("g").attr("transform", `translate(${marginbar.left},${marginbar.top})`);
