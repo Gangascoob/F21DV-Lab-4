@@ -62,7 +62,7 @@ for(i=0; i<filteredData.length; i++)
 function updatebar(data){
 
 
-      xscale.domain([0, d3.max(data, function(d){return d.points} )]);
+      xscale.domain([0, d3.max(data, function(d){return +d.points} )]);
       yscale.domain(data.map(function(d){return d.constructor}));
       
       g_xaxis.transition().call(xaxis);
@@ -84,11 +84,11 @@ function updatebar(data){
                     );
       rect.transition()
                   .attr("height", (yscale.bandwidth() - 10))
-          .attr("width", function(d){ return xscale(d.points);})
+          .attr("width", function(d){ return xscale(+d.points);})
           .attr("y", function(d){ return yscale(d.constructor);});
           
       rect.select("title").text(function(d){
-          if(d.constructor == 9){
+          if(d.constructor == "9"){
               return "Red Bull";
           }
           else return "test";
