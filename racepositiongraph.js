@@ -69,7 +69,7 @@ var xExtent = d3.extent(lapnumbers);
 
 x.domain([ xExtent[0], xExtent[1]]);
 svgrace.selectAll(".myXaxis").transition()
-    .duration(1500)
+    .duration(500)
     .call(xAxis)
 ;
            
@@ -77,7 +77,7 @@ svgrace.selectAll(".myXaxis").transition()
 
 y.domain([ yExtent[1], yExtent[0]])
 svgrace.selectAll(".myYaxis").transition()
-        .duration(1500)
+        .duration(500)
         .call(yAxis)
 ;
             
@@ -97,7 +97,7 @@ dataNest.forEach(function(d,i){
         svgrace.append("path")
             .attr("class", "line")
             .transition()
-            .duration(1500)
+            .duration(750)
             .attr("fill", "none")
             .attr("stroke-width", 1.5)
             .attr("d", linefunction(d.value))

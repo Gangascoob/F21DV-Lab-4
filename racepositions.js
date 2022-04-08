@@ -32,7 +32,7 @@ function loadnext(){
 
     setTimeout(function(){
         updategraph(racedata);
-        AllTeamsCheck();
+        
     }, 750);
 
 };
