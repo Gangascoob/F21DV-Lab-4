@@ -8,7 +8,7 @@ const margin = { top: 1, bottom: 5, left: 5, right: 5 };
 var svgrace = d3.select("#driverpos")
                 .append("svg")
                 .attr("width", "100%")
-                .attr("height", "120%")
+                .attr("height", "100%")
                 .attr("id", "linesvg")
                 .append("g").attr("transform", `translate(${margin.left},${margin.top})`)
                 
