@@ -90,59 +90,53 @@ var linefunction = d3.line()
 ;
 
 
-//dataNest.forEach(function(d,i){
+dataNest.forEach(function(d,i){
 
-    var u = svgrace.selectAll(".line")
-                    .data(dataNest)
-    ;                
-
-        u.enter()
-            .append("path")
+        svgrace.append("path")
             .attr("class", "line")
-            .merge(u)
             .transition()
             .duration(1500)
             .attr("fill", "none")
             .attr("stroke-width", 1.5)
-            .attr("d", linefunction(dataNest.value))
+            .attr("d", linefunction(d.value))
             .attr("stroke", function(){
-                if(dataNest.key == "846" || dataNest.key == "817"){
+                if(d.key == "846" || d.key == "817"){
                     //MCLAREN
                     return "#FF8700";
                 }
-                if(dataNest.key == "1" || dataNest.key == "822"){
+                if(d.key == "1" || d.key == "822"){
                     //MERCEDES
                     return "#00D2BE";
                 }
-                if(dataNest.key == "830" || dataNest.key == "815"){
+                if(d.key == "830" || d.key == "815"){
                     //REDBULL
                     return "#0508a8";
                 }
-                if(dataNest.key == "832" || dataNest.key == "844"){
+                if(d.key == "832" || d.key == "844"){
                     //FERRARI
                     return "#DC0000";
                 }
-                if(dataNest.key == "4" || dataNest.key =="839"){
+                if(d.key == "4" || d.key =="839"){
                     //ALPINE
                     return "#0044ff";
                 }
-                if(dataNest.key == "842" || dataNest.key == "852"){
+                if(d.key == "842" || d.key == "852"){
                     //ALPHATAURI
                     return "#2B4562";
                 }
-                if(dataNest.key == "8" || dataNest.key == "841" || dataNest.key == "9"){
+                if(d.key == "8" || d.key == "841" || d.key == "9"){
                     //ALFAROMEO
                     return "#490303";
                 }
-                if(dataNest.key == "849" || dataNest.key == "847"){
+                if(d.key == "849" || d.key == "847"){
                     //WILLIAMS
                     return "#588ef1";
                 }
-                if(dataNest.key == "854" || dataNest.key == "853"){
+                if(d.key == "854" || d.key == "853"){
                     //HAAS
                     return "#D9D9D9";
                 }
-                if(dataNest.key == "20" || dataNest.key == "840"){
+                if(d.key == "20" || d.key == "840"){
                     //ASTONMARTIN
                     return "#006F62";
                 }
@@ -150,7 +144,7 @@ var linefunction = d3.line()
                 else return "black";
             })
             .attr("id", function(){
-                return idselector(dataNest);
+                return idselector(d);
             })
             .attr("opacity", 1)
             .attr("transform", "translate(50, 30)");
