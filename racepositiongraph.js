@@ -93,7 +93,7 @@ var linefunction = d3.line()
 //dataNest.forEach(function(d,i){
 
     var u = svgrace.selectAll(".line")
-                    .data(data)
+                    .data(dataNest)
     ;                
 
         u.enter()
@@ -104,45 +104,45 @@ var linefunction = d3.line()
             .duration(1500)
             .attr("fill", "none")
             .attr("stroke-width", 1.5)
-            .attr("d", linefunction(d.value))
+            .attr("d", linefunction(data.value))
             .attr("stroke", function(){
-                if(d.key == "846" || d.key == "817"){
+                if(data.key == "846" || data.key == "817"){
                     //MCLAREN
                     return "#FF8700";
                 }
-                if(d.key == "1" || d.key == "822"){
+                if(data.key == "1" || data.key == "822"){
                     //MERCEDES
                     return "#00D2BE";
                 }
-                if(d.key == "830" || d.key == "815"){
+                if(data.key == "830" || data.key == "815"){
                     //REDBULL
                     return "#0508a8";
                 }
-                if(d.key == "832" || d.key == "844"){
+                if(data.key == "832" || data.key == "844"){
                     //FERRARI
                     return "#DC0000";
                 }
-                if(d.key == "4" || d.key =="839"){
+                if(data.key == "4" || data.key =="839"){
                     //ALPINE
                     return "#0044ff";
                 }
-                if(d.key == "842" || d.key == "852"){
+                if(data.key == "842" || data.key == "852"){
                     //ALPHATAURI
                     return "#2B4562";
                 }
-                if(d.key == "8" || d.key == "841" || d.key == "9"){
+                if(data.key == "8" || data.key == "841" || data.key == "9"){
                     //ALFAROMEO
                     return "#490303";
                 }
-                if(d.key == "849" || d.key == "847"){
+                if(data.key == "849" || data.key == "847"){
                     //WILLIAMS
                     return "#588ef1";
                 }
-                if(d.key == "854" || d.key == "853"){
+                if(data.key == "854" || data.key == "853"){
                     //HAAS
                     return "#D9D9D9";
                 }
-                if(d.key == "20" || d.key == "840"){
+                if(data.key == "20" || data.key == "840"){
                     //ASTONMARTIN
                     return "#006F62";
                 }
@@ -150,7 +150,7 @@ var linefunction = d3.line()
                 else return "black";
             })
             .attr("id", function(){
-                return idselector(d);
+                return idselector(data);
             })
             .attr("opacity", 1)
             .attr("transform", "translate(50, 30)");
