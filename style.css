@@ -74,7 +74,7 @@
 	grid-area: infobox;
 	
 	display: flex;
-	height: 34vh;
+	height: 36.5vh;
 	box-shadow: 1px 1px 1px 1px rgb(217, 217, 217);
 }
 
@@ -88,7 +88,7 @@
 
 #wdcwcc{
 	grid-area: wdcwcc;
-	height: 34vh;
+	height: 36.5vh;
 	box-shadow: 1px 1px 1px 1px rgb(217, 217, 217);
 }
 
@@ -178,5 +178,5 @@ rect {
 
   #formbox{
 	  overflow: auto;
-	  max-height: 30vh;
+	  max-height: 32vh;
   }
