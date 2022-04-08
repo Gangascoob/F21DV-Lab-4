@@ -91,6 +91,7 @@ function updatebar(data){
             
             if(d.constructor == "Mclaren"){
                 //MCLAREN
+                console.log("test");
                 return "#FF8700";
             }
             if(d.constructor == "Mercedes"){
