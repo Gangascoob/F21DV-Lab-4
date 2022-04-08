@@ -148,7 +148,7 @@ dataNest.forEach(function(d,i){
             .attr("id", function(){
                 return idselector(d);
             })
-            .attr("opacity", 0)
+            .attr("opacity", 1)
             .attr("transform", "translate(50, 30)");
 
     
