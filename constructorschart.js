@@ -8,8 +8,8 @@ var temp;
 //create svg for barchart.
 var svgbar = d3.select("#wdcwcc")
       		.append("svg")
-                  .attr("width", "100%")
-                  .attr("height", "100%")
+                  .attr("width", "90%")
+                  .attr("height", "80%")
                   .attr("transform", "translate(5, 15)");
 
 //adds g element with margins.                 
