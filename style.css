@@ -178,4 +178,5 @@ rect {
 
   #form{
 	  overflow: auto;
+	  max-height: 28vh;
   }
