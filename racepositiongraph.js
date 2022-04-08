@@ -9,13 +9,13 @@ var svgrace = d3.select("#driverpos")
                 .append("svg")
                // .attr("width", "150%")
                // .attr("height", "120%")
-                .attr("viewbox", '0 0 700 280')
+                .attr("viewbox", '0 0 1400 560')
                 .attr("id", "linesvg")
                 .append("g").attr("transform", `translate(${margin.left},${margin.top})`)
                 
 ;
 
-//initialises x-axis of set size
+//initialises x-axis of set size, transforms it into more appropriate placement and attributes the myXaxis class to it.
 var x = d3.scaleLinear().range([0, 700])
 var xAxis = d3.axisBottom().scale(x);
 svgrace.append("g")
@@ -42,7 +42,7 @@ svgrace.append("text")
 svgrace.append("text")
         .attr("text-anchor", "end")
         .attr("transform", "rotate(-90)")
-        .attr("x", 150)
+        .attr("x", 50)
         .attr("y", 250)
         .text("Driver Position")
 ;

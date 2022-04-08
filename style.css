@@ -72,19 +72,23 @@
 
 #infobox{
 	grid-area: infobox;
+	
 	display: flex;
+	height: 34vh;
 	box-shadow: 1px 1px 1px 1px rgb(217, 217, 217);
 }
 
 #driverpos{
 	grid-area: driverpos;
 	box-shadow: 1px 1px 1px 1px rgb(217, 217, 217);
+	height: 34vh;
 	overflow-x: auto;
 	overflow-y: auto;
 }
 
 #wdcwcc{
 	grid-area: wdcwcc;
+	height: 34vh;
 	box-shadow: 1px 1px 1px 1px rgb(217, 217, 217);
 }
 
