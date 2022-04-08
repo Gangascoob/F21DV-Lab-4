@@ -1,5 +1,5 @@
 //various variables
-const marginbar = { top: 70, bottom: 20, left: 80, right: 20 };
+const marginbar = { top: 70, bottom: 40, left: 80, right: 40 };
 var barwidth = 480;
 var barheight = 220;
 var temp;
