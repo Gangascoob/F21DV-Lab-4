@@ -7,9 +7,8 @@ const margin = { top: 5, bottom: 5, left: 5, right: 5 };
 //selects the driverpos div and appends svg
 var svgrace = d3.select("#driverpos")
                 .append("svg")
-               // .attr("width", "150%")
-               // .attr("height", "120%")
-                .attr("viewbox", '0 0 1400 560')
+                .attr("width", "150%")
+                .attr("height", "120%")
                 .attr("id", "linesvg")
                 .append("g").attr("transform", `translate(${margin.left},${margin.top})`)
                 
@@ -23,7 +22,7 @@ svgrace.append("g")
         .attr("class", "myXaxis")
         
 ;
-
+//same as above for y-axis
 var y = d3.scaleLinear().range([280, 0]);
 var yAxis = d3.axisLeft().scale(y);
 svgrace.append("g")
@@ -31,14 +30,14 @@ svgrace.append("g")
         .attr("transform", "translate(50,30)")
 ;
 
-
+//appends x-axis title
 svgrace.append("text")
         .attr("text-anchor", "end")
         .attr("x", 350)
         .attr("y", 340)
         .text("Lap Number")
 ;        
-
+//appends and rotates y-axis title
 svgrace.append("text")
         .attr("text-anchor", "end")
         .attr("transform", "rotate(-90)")
@@ -47,13 +46,8 @@ svgrace.append("text")
         .text("Driver Position")
 ;
 
-
+//main function for updating graph
 function updategraph(data){
-
-
-
-
-
 
 
 let laps = [];
