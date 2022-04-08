@@ -45,7 +45,7 @@ let data = []; //more data added
 d3.csv("data/constructors2021.csv", function(csv){
 data.push({constructor: csv.constructorId, race: csv.raceId, points: csv.points});			
 }).then(function filter(){
-filteredData = data.filter(function(d){return d.race});
+filteredData = data.filter(function(d){return +d.race == race});
 //resets filteredDataBar to empty so previous data isn't kept
 filteredDataBar = [];
 
