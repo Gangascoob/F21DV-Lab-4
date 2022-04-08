@@ -86,7 +86,7 @@ function updatebar(data){
                   .attr("height", (yscale.bandwidth() - 10))
           .attr("width", function(d){ return xscale(+d.points);})
           .attr("y", function(d){ return yscale(d.constructor);})
-          .attr("fill",function(){
+          .attr("fill",function(d){
             //returns team specific colour based on driver id
 
             if(d.constructor == "Mclaren"){
