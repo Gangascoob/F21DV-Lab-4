@@ -41,8 +41,8 @@ svgrace.append("text")
 svgrace.append("text")
         .attr("text-anchor", "end")
         .attr("transform", "rotate(-90)")
-        .attr("x", 50)
-        .attr("y", 250)
+        .attr("x", 280)
+        .attr("y", 30)
         .text("Driver Position")
 ;
 
@@ -53,7 +53,7 @@ function updategraph(data){
 let laps = [];
 let positions = [];
 
-
+//loops through the data, pushing lap values into the laps array and position values into position array
 for(i=0; i<data.length; i++){
     laps.push(data[i].lap);
 }
@@ -61,10 +61,11 @@ for(i=0; i<data.length; i++){
     positions.push(data[i].position);
 }
 
+//transforms the laps and positions arrays into maps with number values rather than strings.
 var positionnumbers = positions.map(s => +s);
 var lapnumbers = laps.map(s => +s);
 
-
+//returns [min,max] of laps and positions to be used in scale limits
 var yExtent = d3.extent(positionnumbers);
 var xExtent = d3.extent(lapnumbers);
 
