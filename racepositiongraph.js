@@ -2,26 +2,20 @@ const margin = { top: 5, bottom: 5, left: 5, right: 5 };
 
 
 
-//var l;
 
 
-
-var div = d3.select("#linesvg").append("div")	
-    .attr("class", "tooltip")				
-    .style("opacity", 0)
-;
-
-//selects the 
+//selects the driverpos div and appends svg
 var svgrace = d3.select("#driverpos")
                 .append("svg")
-                .attr("width", "150%")
-                .attr("height", "120%")
+               // .attr("width", "150%")
+               // .attr("height", "120%")
+                .attr("viewbox", '0 0 700 280')
                 .attr("id", "linesvg")
                 .append("g").attr("transform", `translate(${margin.left},${margin.top})`)
                 
 ;
 
-
+//initialises x-axis of set size
 var x = d3.scaleLinear().range([0, 700])
 var xAxis = d3.axisBottom().scale(x);
 svgrace.append("g")
