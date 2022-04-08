@@ -7,9 +7,6 @@ driverdata.push({id: data.driverId, number: data.number, code: data.code, forena
 }
 )
 
-setTimeout(function(){
-    console.log(driverdata);
-}, 1500);
 
 
 function drivertooltip(data){

@@ -32,7 +32,7 @@ function loadnext(){
 
     setTimeout(function(){
         updategraph(racedata);
-    }, 1500);
+    }, 750);
 
 };
 
@@ -40,4 +40,4 @@ function loadnext(){
 racefilter();
 setTimeout(function(){
     updategraph(racedata);
-}, 1000);
+}, 500);
