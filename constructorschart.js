@@ -1,5 +1,5 @@
 //various variables
-const margin = { top: 10, bottom: 10, left: 10, right: 10 };
+const marginbar = { top: 10, bottom: 10, left: 10, right: 10 };
 var barwidth = 400;
 var barheight = 250;
 var temp;
@@ -12,7 +12,7 @@ var svgbar = d3.select("#wdcwcc")
                   .attr("height", barheight);
 
 //adds g element with margins.                 
-const g = svgbar.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+const g = svgbar.append("g").attr("transform", `translate(${marginbar.left},${marginbar.top})`);
 
 //scale constants for barchart.
 //.scaleBand sets width for each entry to barchart evenly spread.
