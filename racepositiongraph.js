@@ -81,7 +81,7 @@ svgrace.selectAll(".myXaxis").transition()
 y.domain([ yExtent[1], yExtent[0]])
 svgrace.selectAll(".myYaxis").transition()
         .duration(500)
-        .call(yAxis).ticks(yExtent[1])
+        .call(yAxis)
 ;
             
 //groups the data into driver-groups (e.g. all of driver 1's data is one group) and transforms into array.
