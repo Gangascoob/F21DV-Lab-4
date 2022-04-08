@@ -1,6 +1,6 @@
 //various variables
-const marginbar = { top: 20, bottom: 20, left: 70, right: 20 };
-var barwidth = 500;
+const marginbar = { top: 20, bottom: 20, left: 80, right: 20 };
+var barwidth = 520;
 var barheight = 250;
 var temp;
 
@@ -19,7 +19,7 @@ const g = svgbar.append("g").attr("transform", `translate(${marginbar.left},${ma
 //.scaleBand sets width for each entry to barchart evenly spread.
 //.rangeRound sets the range of the scale.
 //paddingInner is just for some extra spacing between bars.
-const xscale = d3.scaleLinear().range([0, barwidth-70]);
+const xscale = d3.scaleLinear().range([0, barwidth-60]);
 const yscale = d3.scaleBand().rangeRound([0, barheight-40]).paddingInner(0.1);
       
 const xaxis = d3.axisTop().scale(xscale);
