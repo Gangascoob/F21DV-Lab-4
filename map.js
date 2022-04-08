@@ -26,7 +26,7 @@ d3.csv("data/circuits2021.csv", function(data){
 	circuitnames.push(data.name);
 })
 
-d3.csv("data/circuits2021.csv").then( function(data){
+d3.csv("data/circuits2021.csv", data).then( function(data){
 	for(i=0; i<seasonlength; i++){
 		circuitidorder2.push(data.circuitId);
 	}
