@@ -15,6 +15,13 @@ var svgbar = d3.select("#wdcwcc")
 //adds g element with margins.                 
 const g = svgbar.append("g").attr("transform", `translate(${marginbar.left},${marginbar.top})`);
 
+g.append("text")
+        .attr("text-anchor", "end")
+        .attr("x", 200)
+        .attr("y", 10)
+        .text("Constructors Championship Points")
+;   
+
 //scale constants for barchart.
 //.scaleBand sets width for each entry to barchart evenly spread.
 //.rangeRound sets the range of the scale.
