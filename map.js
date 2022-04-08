@@ -25,13 +25,13 @@ d3.csv("data/circuits2021.csv", function(data){
 })
 
 
-
+//appends map svg to its container
 var svg = d3.select("#mapcontainer")
 	.append("svg")
 	.attr("width", "100%")
 	.attr("height", "90%");
 
-
+//reads through json data and 
 d3.json("worldmap.json").then(function(json){
 
     svg.selectAll("path")

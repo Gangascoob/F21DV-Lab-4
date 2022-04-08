@@ -37,6 +37,21 @@ svgrace.append("g")
 ;
 
 
+svgrace.append("text")
+        .attr("text-anchor", "end")
+        .attr("x", 350)
+        .attr("y", 340)
+        .text("Lap Number")
+;        
+
+svgrace.append("text")
+        .attr("text-anchor", "end")
+        .attr("transform", "rotate(-90)")
+        .attr("x", 10)
+        .attr("y", 150)
+        .text("Driver Position")
+;
+
 
 function updategraph(data){
 
