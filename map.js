@@ -25,7 +25,6 @@ d3.csv("data/circuits2021.csv", function(data){
 	circuitnames.push(data.name);
 })
 
-console.log(circuitnames);
 
 //appends map svg to its container
 var svg = d3.select("#mapcontainer")

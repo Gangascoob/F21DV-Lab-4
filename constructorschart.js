@@ -88,7 +88,7 @@ function updatebar(data){
           .attr("y", function(d){ return yscale(d.constructor);})
           .attr("fill",function(d){
             //returns team specific colour based on driver id
-            console.log(d);
+            
             if(d.constructor == "Mclaren"){
                 //MCLAREN
                 return "#FF8700";
