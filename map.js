@@ -1,4 +1,3 @@
-var seasonlength = 22;
 
 //initialising variables + arrays
 var circuitmarks = [];
@@ -6,7 +5,7 @@ var circuitnames = [];
 var circuitidorder = [3, 21, 75, 4, 6, 73, 34, 70, 72, 9, 11, 13, 39, 14, 71, 5, 69, 32, 18, 78, 77, 24];
 var raceidorder = [1052, 1053, 1054, 1055, 1056, 1057, 1059, 1058, 1060, 1061, 1062, 1063, 1064, 1065, 1066, 1067, 1069, 1070, 1071, 1051, 1072, 1073];
 var circuitposition = 0;
-var circuitidorder2 = [];
+
 
 //defines projection so that it's centered well
 var projection = d3.geoEquirectangular() 
@@ -26,13 +25,7 @@ d3.csv("data/circuits2021.csv", function(data){
 	circuitnames.push(data.name);
 })
 
-d3.csv("data/circuits2021.csv", data).then( function(data){
-	for(i=0; i<seasonlength; i++){
-		circuitidorder2.push(data.circuitId);
-	}
-})
 
-console.log(circuitidorder2);
 
 //appends map svg to its container
 var svg = d3.select("#mapcontainer")
