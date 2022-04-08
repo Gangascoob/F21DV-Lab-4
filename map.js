@@ -67,7 +67,7 @@ function nextcircuit(){
 //counts up the circuitposition variable
 circuitposition++;
 
-//if variable goes above the 
+//if variable goes above the length of the circuits array, variable is kept at maximum and text is removed from button.
 if(circuitposition>(circuitidorder.length-1)){
 	circuitposition = circuitidorder.length - 1;
 	d3.select("#nextbut")
@@ -79,6 +79,9 @@ else d3.select("#nextbut")
 d3.select("#prevbut")
 	.text("Previous Round");
 
+
+//Increases marker size of the current circuit to indicate that it's selected
+//also reduces marker size of previous circuit to the original size/colour
 d3.selectAll("#marker" + circuitidorder[circuitposition])
 	.transition()
 	.attr("r", 10)
@@ -89,10 +92,12 @@ d3.selectAll("#marker" + circuitidorder[circuitposition - 1])
 	.attr("r", 3)
 	.attr("fill", "red");
 
+//updates selected race variable and calls the loadnext() function to load data and update graphs.
 raceidselect = +raceidorder[circuitposition];
 loadnext();
 };
 
+//Same as nextCircuit but working backwards.
 function prevcircuit(){
 	circuitposition--;
 
