@@ -11,6 +11,7 @@ var div = d3.select("#linesvg").append("div")
     .style("opacity", 0)
 ;
 
+//selects the 
 var svgrace = d3.select("#driverpos")
                 .append("svg")
                 .attr("width", "150%")
@@ -47,7 +48,7 @@ svgrace.append("text")
 svgrace.append("text")
         .attr("text-anchor", "end")
         .attr("transform", "rotate(-90)")
-        .attr("x", 250)
+        .attr("x", 150)
         .attr("y", 250)
         .text("Driver Position")
 ;
