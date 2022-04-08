@@ -19,7 +19,7 @@ const g = svgbar.append("g").attr("transform", `translate(${marginbar.left},${ma
 //.scaleBand sets width for each entry to barchart evenly spread.
 //.rangeRound sets the range of the scale.
 //paddingInner is just for some extra spacing between bars.
-const xscale = d3.scaleLinear().range([0, barwidth]);
+const xscale = d3.scaleLinear().range([0, barwidth-50]);
 const yscale = d3.scaleBand().rangeRound([0, barheight-40]).paddingInner(0.1);
       
 const xaxis = d3.axisTop().scale(xscale);
@@ -36,7 +36,7 @@ function barchart(race){
 
 
 let data = []; //more data added
-temp = race;
+
 
 //Pushes specific attributes of the csv into data[] so it can be filtered.
 //Data is then filtered to only return the row with the matching name and dates.
@@ -53,7 +53,7 @@ for(i=0; i<filteredData.length; i++)
 {
     filteredDataBar.push({constructor: filteredData[i].constructor, race: filteredData[i].race, points: filteredData[i].points});
 }
-
+console.log(filteredDataBar);
 });
 };
 
