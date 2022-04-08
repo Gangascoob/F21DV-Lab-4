@@ -53,7 +53,7 @@ for(i=0; i<filteredData.length; i++)
 {
     filteredDataBar.push({constructor: filteredData[i].constructor, race: filteredData[i].race, points: filteredData[i].points});
 }
-console.log(filteredDataBar);
+
 });
 };
 
