@@ -1,4 +1,5 @@
 let driverdata  = [];
+var alldriverscheck;
 
 d3.csv("data/drivers2021.csv",function(data){
 driverdata.push({id: data.driverId, number: data.number, code: data.code, forename: data.forename, surname: data.surname});
@@ -24,9 +25,10 @@ function AllTeamsCheck(){
 var checkbox = document.getElementsByName("allteams");
 if (checkbox[0].checked){
     d3.selectAll(".line").transition().duration(500).attr("opacity", 1);
+    alldriverscheck = 1;
 }
 else d3.selectAll(".line").transition().duration(500).attr("opacity", 0);
-
+alldriverscheck = 0;
 
 }
 

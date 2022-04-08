@@ -17,6 +17,7 @@ var svgrace = d3.select("#driverpos")
                 .attr("height", "120%")
                 .attr("id", "linesvg")
                 .append("g").attr("transform", `translate(${margin.left},${margin.top})`)
+                
 ;
 
 
@@ -147,7 +148,12 @@ dataNest.forEach(function(d,i){
             .attr("id", function(){
                 return idselector(d);
             })
-            .attr("opacity", 0)
+            .attr("opacity", function(){
+                if(alldriverscheck == 1){
+                    return 1;
+                }
+                else return 0;
+            })
             .attr("transform", "translate(50, 30)");
 
     
