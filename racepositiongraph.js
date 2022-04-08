@@ -1,4 +1,4 @@
-const margin = { top: 5, bottom: 5, left: 5, right: 5 };
+const margin = { top: 1, bottom: 5, left: 5, right: 5 };
 
 
 
