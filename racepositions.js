@@ -34,11 +34,11 @@ function loadnext(){
     barchart(raceidselect);
     setTimeout(function(){
         updatebar(filteredDataBar);
-    }, 750);
+    }, 250);
     setTimeout(function(){
         updategraph(racedata);
         
-    }, 750);
+    }, 250);
 
 };
 
@@ -47,7 +47,7 @@ racefilter();
 barchart(raceidselect);
     setTimeout(function(){
         updatebar(filteredDataBar);
-    }, 750);
+    }, 250);
 setTimeout(function(){
     updategraph(racedata);
-}, 500);
+}, 250);
