@@ -103,7 +103,9 @@ dataNest.forEach(function(d,i){
         svgrace.append("path")
             .attr("class", "line")
             .transition()
-            .duration(750)
+            .delay(function(d, i){
+                return i * 75;
+            })
             .attr("fill", "none")
             .attr("stroke-width", 1.5)
             .attr("d", linefunction(d.value))
