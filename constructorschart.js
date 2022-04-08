@@ -8,8 +8,8 @@ var temp;
 //create svg for barchart.
 var svgbar = d3.select("#wdcwcc")
       		.append("svg")
-                  .attr("width", barwidth)
-                  .attr("height", barheight)
+                  .attr("width", "100%")
+                  .attr("height", "100%")
                   .attr("transform", "translate(5, 15)");
 
 //adds g element with margins.                 
@@ -19,8 +19,8 @@ const g = svgbar.append("g").attr("transform", `translate(${marginbar.left},${ma
 //.scaleBand sets width for each entry to barchart evenly spread.
 //.rangeRound sets the range of the scale.
 //paddingInner is just for some extra spacing between bars.
-const xscale = d3.scaleLinear().range([0, barwidth-60]);
-const yscale = d3.scaleBand().rangeRound([0, barheight-40]).paddingInner(0.1);
+const xscale = d3.scaleLinear().range([0, 460]);
+const yscale = d3.scaleBand().rangeRound([0, 240]).paddingInner(0.1);
       
 const xaxis = d3.axisTop().scale(xscale);
 const yaxis = d3.axisLeft().scale(yscale);
@@ -74,6 +74,10 @@ function updatebar(data){
                   .join(function(enter){
                     
                     const rect_enter = enter.append("rect").attr("x", 0);
+
+
+
+
                     rect_enter.append("title");
                     return rect_enter;
                     },
@@ -91,7 +95,7 @@ function updatebar(data){
             
             if(d.constructor == "Mclaren"){
                 //MCLAREN
-                console.log("test");
+                
                 return "#FF8700";
             }
             if(d.constructor == "Mercedes"){
