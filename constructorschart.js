@@ -31,51 +31,45 @@ let filteredData = [];
 
 
 //Main function for producing bar charts.
-function barchart(name){
+function barchart(race){
 
-let barcsv = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv";
+
 let data = []; //more data added
-temp = name;
-//console.log(iso);
-//console.log(temp);
+temp = race;
 
 //Pushes specific attributes of the csv into data[] so it can be filtered.
 //Data is then filtered to only return the row with the matching name and dates.
 //Since this is only ever an array of length 1, we can target it easily to select only the data we want for the graph
 //and rearrange it into a better format for graphing use. 
-d3.csv(barcsv, function(csv){
-data.push({location: csv.location, date: csv.date, vaccinated:
-   + csv.people_vaccinated, 
-   fullvaccinated: + csv.people_fully_vaccinated,
-   booster: + csv.total_boosters});			
+d3.csv("data/constructors2021", function(csv){
+data.push({constructor: csv.constructorId, race: csv.raceId, points: csv.points});			
 }).then(function filter(){
-filteredData = data.filter(function(d){return d.location == name && d.date == date});
+filteredData = data.filter(function(d){return d.race});
+//resets filteredDataBar to empty so previous data isn't kept
+filteredDataBar = [];
 
+for(i=0; i<filteredData.length; i++)
+{
+    filteredDataBar.push({constructor: filteredData[i].constructor, race: filteredData[i].race, points: filteredData[i].points});
+}
 
-filteredDataBar = [{vacctype: "Booster", number: filteredData[0].booster}, {vacctype: "Fully Vaccinated", number: (filteredData[0].fullvaccinated - filteredData[0].booster)}, 
-{vacctype: "Singly Vaccinated", number: (filteredData[0].vaccinated - filteredData[0].booster - filteredData[0].fullvaccinated)} ];
-
-//console.log(data[5].location);
-//console.log(filteredDataBar);
-//console.log(filteredVaccNumbers);
 });
 };
-
 
 //Function for updating the bars.
 
 function updatebar(data){
 
 
-      xscale.domain([0, d3.max(data, function(d){return d.number} )]);
-      yscale.domain(data.map(function(d){return d.vacctype}));
+      xscale.domain([0, d3.max(data, function(d){return d.points} )]);
+      yscale.domain(data.map(function(d){return d.constructor}));
       
       g_xaxis.transition().call(xaxis);
       g_yaxis.transition().call(yaxis);
       
       
       const rect = g.selectAll("rect")
-                  .data(data, function(d){return d.vacctype;})
+                  .data(data, function(d){return d.constructor;})
                   .join(function(enter){
                     
                     const rect_enter = enter.append("rect").attr("x", 0);
@@ -89,9 +83,14 @@ function updatebar(data){
                     );
       rect.transition()
                   .attr("height", (yscale.bandwidth() - 10))
-          .attr("width", function(d){ return xscale(d.number);})
-          .attr("y", function(d){ return yscale(d.vacctype);});
+          .attr("width", function(d){ return xscale(d.points);})
+          .attr("y", function(d){ return yscale(d.constructor);});
           
-      rect.select("title").text(function(d){return d.vacctype});
+      rect.select("title").text(function(d){
+          if(d.constructor == "9"){
+              return "Red Bull";
+          }
+          else return "test";
+      });
       
 };
