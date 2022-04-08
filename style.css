@@ -16,7 +16,7 @@
 
 #tophalfcontainer{
     display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: 1fr;
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
@@ -29,7 +29,7 @@
 	padding: 20px;
 	background-color: white;
 	box-shadow: 1px 1px 1px 2px rgb(217, 217, 217);
-	grid-template-areas: "infobox driverpos wdcwcc";
+	grid-template-areas: "infobox driverpos driverpos driverpos wdcwwcc wdcwcc";
 
 }
 

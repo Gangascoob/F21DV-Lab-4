@@ -90,7 +90,7 @@ var linefunction = d3.line()
                      .y(function(d){return y(+d.position);})
 ;
 
-d3.selectAll(".line").remove();
+d3.selectAll(".line").transition().remove();
 
 dataNest.forEach(function(d,i){
 
