@@ -88,7 +88,7 @@ function updatebar(data){
           .attr("y", function(d){ return yscale(d.constructor);});
           
       rect.select("title").text(function(d){
-          if(d.constructor == "9"){
+          if(d.constructor == 9){
               return "Red Bull";
           }
           else return "test";
