@@ -148,12 +148,7 @@ dataNest.forEach(function(d,i){
             .attr("id", function(){
                 return idselector(d);
             })
-            .attr("opacity", function(){
-                if(alldriverscheck == 1){
-                    return 1;
-                }
-                else return 0;
-            })
+            .attr("opacity", 0)
             .attr("transform", "translate(50, 30)");
 
     

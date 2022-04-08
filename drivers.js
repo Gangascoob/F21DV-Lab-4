@@ -1,5 +1,5 @@
 let driverdata  = [];
-var alldriverscheck;
+let alldriverscheck;
 
 d3.csv("data/drivers2021.csv",function(data){
 driverdata.push({id: data.driverId, number: data.number, code: data.code, forename: data.forename, surname: data.surname});

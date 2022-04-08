@@ -85,6 +85,7 @@ d3.selectAll("#marker" + circuitidorder[circuitposition - 1])
 
 raceidselect = +raceidorder[circuitposition];
 loadnext();
+AllTeamsCheck();
 };
 
 function prevcircuit(){
@@ -112,6 +113,7 @@ function prevcircuit(){
 
 	raceidselect = +raceidorder[circuitposition];
 	loadnext();
+	AllTeamsCheck();
 	};
 
 
